@@ -1,3 +1,3 @@
-api = 2
 core = 8.x
-projects[drupal][version] = 8.2.7
+api = 2
+defaults[projects][subdir] = contrib
