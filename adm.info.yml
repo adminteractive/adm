@@ -1,0 +1,16 @@
+name: ADM
+core: 8.x
+type: profile
+description: 'ADM Interactive Drupal distribution.'
+distribution:
+  name: ADM
+dependencies:
+  - node
+  - block
+  - dblog
+  - page_cache
+  - dynamic_page_cache
+  - toolbar  
+themes:
+  - stark
+  - seven

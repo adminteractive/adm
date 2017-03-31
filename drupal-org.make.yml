@@ -4,4 +4,3 @@ core: "8.x"
 projects:
   drupal:
     version: "8.2.7"
-
