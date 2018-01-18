@@ -1,6 +1,6 @@
 <?php
-
 /**
  * @file
- * The ADM profile.
+ * Enables modules and site configuration for a standard site installation.
  */
+

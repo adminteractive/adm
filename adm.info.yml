@@ -4,13 +4,54 @@ type: profile
 description: 'ADM Interactive Drupal distribution.'
 distribution:
   name: ADM
+
 dependencies:
-  - node
+  # Core dependencies
+  - automated_cron
+  - big_pipe
   - block
-  - dblog
-  - page_cache
+  - block_content
+  - ckeditor
+  - color
+  - config
+  - contextual
+  - datetime
   - dynamic_page_cache
-  - toolbar  
+  - editor
+  - filter
+  - entity_reference
+  - field
+  - field_ui
+  - file
+  - help
+  - history
+  - image
+  - menu_link_content
+  - menu_ui
+  - node
+  - options
+  - page_cache
+  - path
+  - quickedit
+  - shortcut
+  - syslog
+  - taxonomy
+  - telephone
+  - toolbar
+  - update
+  - views
+  - user
+  - text
+  - settings_tray
+
+  # Contrib dependencies
+  - token
+  - smart_trim
+  - linkit
+  - pathauto
+  - recreate_block_content
+  - webform
+
 themes:
-  - stark
   - seven
+  - bartik
