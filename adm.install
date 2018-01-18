@@ -10,4 +10,7 @@
 function adm_install() {
   include_once DRUPAL_ROOT . '/core/profiles/standard/standard.install';
   standard_install();
+
+  // Allow visitor account creation, but with administrative approval.
+  \Drupal::configFactory()->getEditable('user.settings')->set('register', USER_REGISTER_VISITORS_ADMINISTRATIVE_APPROVAL)->save(TRUE);
 }
