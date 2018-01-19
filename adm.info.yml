@@ -5,53 +5,55 @@ description: 'ADM Interactive Drupal distribution.'
 distribution:
   name: ADM
 
+# Namespaces are not yet supported by profiles
+# See https://www.drupal.org/project/drupal/issues/2855026
 dependencies:
   # Core dependencies
-  - drupal:automated_cron
-  - drupal:big_pipe
-  - drupal:block
-  - drupal:block_content
-  - drupal:ckeditor
-  - drupal:color
-  - drupal:config
-  - drupal:contextual
-  - drupal:datetime
-  - drupal:db_log
-  - drupal:dynamic_page_cache
-  - drupal:editor
-  - drupal:filter
-  - drupal:entity_reference
-  - drupal:field
-  - drupal:field_ui
-  - drupal:file
-  - drupal:help
-  - drupal:history
-  - drupal:image
-  - drupal:menu_link_content
-  - drupal:menu_ui
-  - drupal:node
-  - drupal:options
-  - drupal:page_cache
-  - drupal:path
-  - drupal:quickedit
-  - drupal:shortcut
-  - drupal:syslog
-  - drupal:taxonomy
-  - drupal:telephone
-  - drupal:toolbar
-  - drupal:update
-  - drupal:views
-  - drupal:user
-  - drupal:text
-  - drupal:settings_tray
+  - automated_cron
+  - big_pipe
+  - block
+  - block_content
+  - ckeditor
+  - color
+  - config
+  - contextual
+  - datetime
+  - db_log
+  - dynamic_page_cache
+  - editor
+  - filter
+  - entity_reference
+  - field
+  - field_ui
+  - file
+  - help
+  - history
+  - image
+  - menu_link_content
+  - menu_ui
+  - node
+  - options
+  - page_cache
+  - path
+  - quickedit
+  - shortcut
+  - syslog
+  - taxonomy
+  - telephone
+  - toolbar
+  - update
+  - views
+  - user
+  - text
+  - settings_tray
 
   # Contrib dependencies
-  - token:token
-  - smart_trim:smart_trim
-  - linkit:linkit
-  - pathauto:pathauto
-  - recreate_block_content:recreate_block_content
-  - webform:webform
+  - token
+  - smart_trim
+  - linkit
+  - pathauto
+  - recreate_block_content
+  - webform
 
 themes:
   - seven
