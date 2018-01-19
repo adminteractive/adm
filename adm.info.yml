@@ -19,7 +19,7 @@ dependencies:
   - contextual
   - datetime
   - datetime_range
-  - db_log
+  - dblog
   - dynamic_page_cache
   - editor
   - filter
