@@ -18,6 +18,7 @@ dependencies:
   - config
   - contextual
   - datetime
+  - datetime_range
   - db_log
   - dynamic_page_cache
   - editor
@@ -27,7 +28,6 @@ dependencies:
   - field_ui
   - file
   - help
-  - history
   - image
   - menu_link_content
   - menu_ui
@@ -36,6 +36,7 @@ dependencies:
   - page_cache
   - path
   - quickedit
+  - search
   - shortcut
   - syslog
   - taxonomy
@@ -48,12 +49,16 @@ dependencies:
   - settings_tray
 
   # Contrib dependencies
+  - admin_toolbar
+  - admin_toolbar_tools
+  - admin_toolbar_links_access_filter
   - token
   - smart_trim
   - linkit
   - pathauto
   - recreate_block_content
   - webform
+  - webform_ui
 
 themes:
   - seven
