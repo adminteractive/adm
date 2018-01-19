@@ -1,10 +1,17 @@
 {
-    "name": "drupal/adm",
+    "name": "adminteractive/adm",
     "description": "ADM Interactive Drupal distribution",
     "type": "drupal-profile",
     "minimum-stability": "dev",
     "prefer-stable": true,
     "license": "GPL-2.0+",
+    "authors": [
+        {
+            "name": "ADM Interactive",
+            "homepage": "https://www.drupal.org/project/adm",
+            "role": "Maintainer"
+        }
+    ],
     "support": {
         "issues": "http://drupal.org/project/issues/adm",
         "source": "http://cgit.drupalcode.org/adm"
