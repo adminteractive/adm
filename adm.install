@@ -58,6 +58,23 @@ function adm_install() {
 
   // Enable the admin theme.
   \Drupal::configFactory()->getEditable('node.settings')->set('use_admin_theme', TRUE)->save(TRUE);
-  // Allow visitor account creation, but with administrative approval.
-  \Drupal::configFactory()->getEditable('user.settings')->set('register', USER_REGISTER_VISITORS_ADMINISTRATIVE_APPROVAL)->save(TRUE);
+
+  try {
+    // Delete member profile.
+    \Drupal::entityTypeManager()->getStorage('imce_profile')->load('member')->delete();
+  }
+  catch (\Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException $e) {
+    \Drupal::logger('adm')->notice('Unable to delete Member profile - not found.');
+  }
+
+  // Todo these details should come through installation wizard.
+  $editor = User::create([
+    'name' => 'editor',
+    'mail' => 'editor@dev',
+    'roles' => ['editor'],
+    // Not secure, but the account is disabled by default.
+    'password' => 'editor',
+  ]);
+
+  $editor->save();
 }
