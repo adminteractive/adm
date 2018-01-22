@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.text_section.field_text_section_content
+    - paragraphs.paragraphs_type.text_section
+  module:
+    - text
+id: paragraph.text_section.default
+targetEntityType: paragraph
+bundle: text_section
+mode: default
+content:
+  field_text_section_content:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content

@@ -55,6 +55,7 @@ dependencies:
   - token
   - smart_trim
   - linkit
+  - paragraphs
   - pathauto
   - recreate_block_content
   - webform
