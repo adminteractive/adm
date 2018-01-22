@@ -52,6 +52,7 @@ dependencies:
   - admin_toolbar
   - admin_toolbar_tools
   - admin_toolbar_links_access_filter
+  - imce
   - token
   - smart_trim
   - linkit
