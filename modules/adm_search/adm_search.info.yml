@@ -1,0 +1,7 @@
+name: ADM Search
+description: "Search API based database search"
+type: module
+core: 8.x
+
+dependencies:
+  - search_api:search_api

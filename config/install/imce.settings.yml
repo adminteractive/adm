@@ -1,0 +1,6 @@
+abs_urls: false
+admin_theme: true
+roles_profiles:
+  administrator:
+    public: admin
+langcode: en

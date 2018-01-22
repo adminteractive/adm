@@ -1,0 +1,30 @@
+langcode: en
+status: true
+dependencies: {  }
+id: editor
+label: 'Editor profile'
+description: 'Editor files'
+conf:
+  extensions: 'jpg png gif pdf doc docx txt csv xls xlsx ppt pptx rtf'
+  maxsize: !!float 128
+  quota: !!float 0
+  maxwidth: null
+  maxheight: null
+  replace: 0
+  folders:
+    -
+      path: content-files
+      permissions:
+        browse_files: true
+        browse_subfolders: true
+        upload_files: true
+        delete_files: true
+        resize_images: true
+    -
+      path: content-files/images
+      permissions:
+        all: true
+    -
+      path: content-files/documents
+      permissions:
+        all: true
