@@ -19,14 +19,12 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_page_components:
-    type: paragraphs
+    type: entity_reference_paragraphs
     weight: 121
     settings:
       title: Paragraph
       title_plural: Paragraphs
       edit_mode: closed
-      closed_mode: summary
-      autocollapse: none
       add_mode: dropdown
       form_display_mode: default
       default_paragraph_type: text_section
