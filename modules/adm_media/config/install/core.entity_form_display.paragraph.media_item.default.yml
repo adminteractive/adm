@@ -3,16 +3,16 @@ status: true
 dependencies:
   config:
     - entity_browser.browser.media_entity_browser
-    - field.field.paragraph.gallery.field_gallery_items
-    - paragraphs.paragraphs_type.gallery
+    - field.field.paragraph.media_item.field_media_item
+    - paragraphs.paragraphs_type.media_item
   module:
     - entity_browser
-id: paragraph.gallery.default
+id: paragraph.media_item.default
 targetEntityType: paragraph
-bundle: gallery
+bundle: media_item
 mode: default
 content:
-  field_gallery_items:
+  field_media_item:
     weight: 0
     settings:
       entity_browser: media_entity_browser

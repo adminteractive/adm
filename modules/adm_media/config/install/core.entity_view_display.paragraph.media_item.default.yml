@@ -2,19 +2,19 @@ langcode: et
 status: true
 dependencies:
   config:
-    - field.field.paragraph.gallery.field_gallery_items
-    - paragraphs.paragraphs_type.gallery
-id: paragraph.gallery.default
+    - field.field.paragraph.media_item.field_media_item
+    - paragraphs.paragraphs_type.media_item
+id: paragraph.media_item.default
 targetEntityType: paragraph
-bundle: gallery
+bundle: media_item
 mode: default
 content:
-  field_gallery_items:
+  field_media_item:
     type: entity_reference_entity_view
     weight: 0
     label: hidden
     settings:
-      view_mode: thumbnail
+      view_mode: embed
       link: false
     third_party_settings: {  }
     region: content
