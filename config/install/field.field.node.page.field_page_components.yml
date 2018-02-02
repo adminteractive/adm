@@ -1,4 +1,3 @@
-uuid: 2305bfd1-b840-400d-b7ae-581606cd5827
 langcode: et
 status: true
 dependencies:
@@ -7,8 +6,6 @@ dependencies:
     - node.type.page
   module:
     - entity_reference_revisions
-_core:
-  default_config_hash: mrefBBL9DQbogIA-vgfsQZUmMVXW02LfRrN6wm6X1lk
 id: node.page.field_page_components
 field_name: field_page_components
 entity_type: node
