@@ -1,0 +1,13 @@
+langcode: et
+status: true
+dependencies: {  }
+name: media_thumbnail
+label: 'Media thumbnail (300x171)'
+effects:
+  b2a09193-816f-4afa-a716-975bd324899a:
+    uuid: b2a09193-816f-4afa-a716-975bd324899a
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 300
+      height: 171

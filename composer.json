@@ -42,7 +42,12 @@
         "drupal/recreate_block_content": "^2.0",
         "drupal/search_api": "1.6",
         "drupal/smart_trim": "1.1",
-        "drupal/webform": "^5.0@beta"
+        "drupal/webform": "^5.0@beta",
+        "drupal/entity_browser": "dev-2.x",
+        "drupal/entity_browser_enhanced": "dev-1.x",
+        "drupal/entity_embed": "dev-1.x",
+        "drupal/media_entity_browser": "dev-2.x",
+        "drupal/video_embed_field": "dev-2.x"
     },
     "require-dev": {
         "behat/mink": "~1.7",

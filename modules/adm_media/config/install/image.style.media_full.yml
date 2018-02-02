@@ -1,0 +1,14 @@
+langcode: et
+status: true
+dependencies: {  }
+name: media_full
+label: 'Media full (1200)'
+effects:
+  edff4385-f136-47e8-9f6b-c9a314ace950:
+    uuid: edff4385-f136-47e8-9f6b-c9a314ace950
+    id: image_scale
+    weight: 1
+    data:
+      width: 1200
+      height: null
+      upscale: false

@@ -1,0 +1,13 @@
+langcode: et
+status: true
+dependencies: {  }
+name: media_medium
+label: 'Media medium (480x274)'
+effects:
+  a620f4e0-4e62-4e31-b018-32660bced636:
+    uuid: a620f4e0-4e62-4e31-b018-32660bced636
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 480
+      height: 274

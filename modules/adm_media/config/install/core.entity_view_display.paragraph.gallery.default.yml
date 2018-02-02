@@ -1,0 +1,24 @@
+langcode: et
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.gallery.field_gallery_items
+    - image.style.media_thumbnail
+    - paragraphs.paragraphs_type.gallery
+  module:
+    - media
+id: paragraph.gallery.default
+targetEntityType: paragraph
+bundle: gallery
+mode: default
+content:
+  field_gallery_items:
+    type: media_thumbnail
+    weight: 0
+    label: hidden
+    settings:
+      image_style: media_thumbnail
+      image_link: ''
+    third_party_settings: {  }
+    region: content
+hidden: {  }

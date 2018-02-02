@@ -1,0 +1,9 @@
+langcode: et
+status: true
+dependencies:
+  module:
+    - media
+id: media.thumbnail
+label: Thumbnail
+targetEntityType: media
+cache: true
