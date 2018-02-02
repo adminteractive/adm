@@ -1,12 +1,14 @@
-langcode: en
+uuid: 2305bfd1-b840-400d-b7ae-581606cd5827
+langcode: et
 status: true
 dependencies:
   config:
     - field.storage.node.field_page_components
     - node.type.page
-    - paragraphs.paragraphs_type.text_section
   module:
     - entity_reference_revisions
+_core:
+  default_config_hash: mrefBBL9DQbogIA-vgfsQZUmMVXW02LfRrN6wm6X1lk
 id: node.page.field_page_components
 field_name: field_page_components
 entity_type: node
@@ -21,10 +23,12 @@ settings:
   handler: 'default:paragraph'
   handler_settings:
     negate: 0
-    target_bundles:
-      text_section: text_section
+    target_bundles: null
     target_bundles_drag_drop:
       text_section:
-        enabled: true
         weight: 2
+        enabled: false
+      gallery:
+        weight: 3
+        enabled: false
 field_type: entity_reference_revisions
