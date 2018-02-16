@@ -1,0 +1,54 @@
+.view-media-browser .view-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.view-media-browser .views-row {
+  position: relative;
+  margin-bottom: 2em;
+  width: 24%;
+}
+
+.view-media-browser .views-row img {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.view-media-browser .views-col.selected:before {
+  background-size: 25%;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.view-media-browser .views-field-entity-browser-select {
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  bottom: 0;
+}
+
+.media-info {
+  box-sizing: border-box;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  bottom: 5px;
+  background-color: rgba(0,0,0,.8);
+  padding: 5px 10px;
+  color: white;
+  text-align: left;
+}
+
+.media-info span {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 18px;
+  width: 18px;
+  background-size: 16px 16px;
+  margin-right: 4px;
+}

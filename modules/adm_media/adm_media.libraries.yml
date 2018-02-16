@@ -1,0 +1,7 @@
+view:
+  css:
+    theme:
+      css/adm_media.view.css: {}
+  dependencies:
+    - core/jquery
+    - core/drupal

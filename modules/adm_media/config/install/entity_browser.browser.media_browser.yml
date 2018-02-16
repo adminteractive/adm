@@ -1,0 +1,41 @@
+langcode: et
+status: true
+dependencies:
+  config:
+    - views.view.media_browser
+  module:
+    - views
+name: media_browser
+label: 'Media browser'
+display: modal
+display_configuration:
+  width: '1024'
+  height: '680'
+  link_text: 'Select media'
+  auto_open: false
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: tabs
+widget_selector_configuration: {  }
+widgets:
+  074730ae-16c3-4eba-a342-e51077f50458:
+    settings:
+      view: media_browser
+      view_display: media_browser
+      submit_text: 'Select media'
+      auto_select: false
+    uuid: 074730ae-16c3-4eba-a342-e51077f50458
+    weight: 1
+    label: Library
+    id: view
+  68372eba-ef65-4fce-a4ff-6f8b31bf9b6c:
+    settings:
+      extensions: 'jpg jpeg png gif'
+      media_type: image
+      upload_location: 'public://'
+      multiple: '1'
+      submit_text: 'Select files'
+    uuid: 68372eba-ef65-4fce-a4ff-6f8b31bf9b6c
+    weight: 2
+    label: 'Image upload'
+    id: media_image_upload
