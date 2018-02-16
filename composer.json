@@ -34,7 +34,6 @@
         "webmozart/path-util": "^2.3",
         "drupal/admin_toolbar": "^1.20",
         "drupal/allowed_formats": "1.1",
-        "drupal/imce": "^1.6",
         "drupal/linkit": "5.x-dev",
         "drupal/paragraphs": "^1.2",
         "drupal/pathauto": "^1.0",
@@ -46,7 +45,6 @@
         "drupal/entity_browser": "dev-2.x",
         "drupal/entity_browser_enhanced": "dev-1.x",
         "drupal/entity_embed": "dev-1.x",
-        "drupal/media_entity_browser": "dev-2.x",
         "drupal/video_embed_field": "dev-2.x"
     },
     "require-dev": {

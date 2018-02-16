@@ -59,14 +59,6 @@ function adm_install() {
   // Enable the admin theme.
   \Drupal::configFactory()->getEditable('node.settings')->set('use_admin_theme', TRUE)->save(TRUE);
 
-  try {
-    // Delete member profile.
-    \Drupal::entityTypeManager()->getStorage('imce_profile')->load('member')->delete();
-  }
-  catch (\Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException $e) {
-    \Drupal::logger('adm')->notice('Unable to delete Member profile - not found.');
-  }
-
   // Todo these details should come through installation wizard.
   $editor = User::create([
     'name' => 'editor',
