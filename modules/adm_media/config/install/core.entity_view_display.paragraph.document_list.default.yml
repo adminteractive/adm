@@ -1,0 +1,21 @@
+langcode: et
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.document_list.field_documents_list_items
+    - paragraphs.paragraphs_type.document_list
+id: paragraph.document_list.default
+targetEntityType: paragraph
+bundle: document_list
+mode: default
+content:
+  field_documents_list_items:
+    type: entity_reference_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: embed
+      link: false
+    third_party_settings: {  }
+    region: content
+hidden: {  }

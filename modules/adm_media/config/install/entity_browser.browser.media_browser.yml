@@ -2,8 +2,12 @@ langcode: et
 status: true
 dependencies:
   config:
+    - media.type.document
+    - media.type.image
     - views.view.media_browser
   module:
+    - dropzonejs_eb_widget
+    - media
     - views
 name: media_browser
 label: 'Media browser'
@@ -25,17 +29,44 @@ widgets:
       submit_text: 'Select media'
       auto_select: false
     uuid: 074730ae-16c3-4eba-a342-e51077f50458
-    weight: 1
+    weight: -10
     label: Library
     id: view
-  68372eba-ef65-4fce-a4ff-6f8b31bf9b6c:
+  5e3a0ee4-e247-4331-adeb-6b7642bc632f:
     settings:
-      extensions: 'jpg jpeg png gif'
+      media_type: document
+      upload_location: 'public://[date:custom:Y]-[date:custom:m]'
+      dropzone_description: 'Drop files here to upload them'
+      max_filesize: 512M
+      extensions: 'jpg jpeg gif png txt doc xls pdf ppt pps odt ods odp'
+      clientside_resize: false
+      resize_width: null
+      resize_height: null
+      resize_quality: !!float 1
+      resize_method: contain
+      thumbnail_method: contain
+      submit_text: 'Select entities'
+      auto_select: false
+    uuid: 5e3a0ee4-e247-4331-adeb-6b7642bc632f
+    weight: -7
+    label: 'Documents upload'
+    id: dropzonejs_media_entity
+  07c7b08c-c822-443e-bfa2-08eff360c644:
+    settings:
       media_type: image
-      upload_location: 'public://'
-      multiple: '1'
-      submit_text: 'Select files'
-    uuid: 68372eba-ef65-4fce-a4ff-6f8b31bf9b6c
-    weight: 2
-    label: 'Image upload'
-    id: media_image_upload
+      upload_location: 'public://[date:custom:Y]-[date:custom:m]'
+      dropzone_description: 'Drop files here to upload them'
+      max_filesize: 512M
+      extensions: 'jpg jpeg gif png'
+      clientside_resize: false
+      resize_width: null
+      resize_height: null
+      resize_quality: !!float 1
+      resize_method: contain
+      thumbnail_method: contain
+      submit_text: 'Select images'
+      auto_select: false
+    uuid: 07c7b08c-c822-443e-bfa2-08eff360c644
+    weight: -8
+    label: 'Images upload'
+    id: dropzonejs_media_entity
