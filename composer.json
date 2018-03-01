@@ -93,9 +93,6 @@
         "patches": {
             "drupal/paragraphs": {
                 "Paragraphs asymmetric support": "https://www.drupal.org/files/issues/2461695-234.patch"
-            },
-            "drupal/recaptcha": {
-                "Integrate Invisible reCaptcha": "https://www.drupal.org/files/issues/recaptcha-invisible-option-2852269-56.patch"
             }
         }
     }
