@@ -1,0 +1,18 @@
+name: ADM Theme
+description: ADM base theme
+
+type: theme
+core: 8.x
+base theme: classy
+
+regions:
+  navbar: Navbar
+  header: Header
+  content: Content
+  sidebar_first: 'First sidebar'
+  footer: Footer
+
+libraries:
+  - adm_theme/bootstrap-cdn
+
+
