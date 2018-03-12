@@ -44,25 +44,40 @@
 #}
 <div class="layout-container">
 
-  {{ page.navbar }}
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      {{ page.navbar_brand }}
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ "Toggle navigation"|t }}">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
+        {{ page.navbar_items }}
+      </div>
+    </div>
+
+  </nav>
 
   <header role="banner">
     {{ page.header }}
   </header>
 
-  {{ page.primary_menu }}
-  {{ page.secondary_menu }}
+  {% if page.breadcrumb %}
+    <div class="container mt-3">
+      {{ page.breadcrumb }}
+    </div>
+  {% endif %}
 
-  {{ page.breadcrumb }}
-
-  {{ page.highlighted }}
-
-  {{ page.help }}
+  {% if page.highlighted %}
+    <div class="container">
+      {{ page.highlighted }}
+    </div>
+  {% endif %}
 
   <main role="main">
     <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
 
-    <div class="container">
+    <div class="container mt-5">
       <div class="row">
 
         <div class="layout-content {{ page.sidebar_first ? 'col-md-9' : 'col-md-12' }}">
@@ -81,8 +96,10 @@
   </main>
 
   {% if page.footer %}
-    <footer role="contentinfo">
-      {{ page.footer }}
+    <footer class="bg-light mt-5" role="contentinfo">
+      <div class="container">
+        {{ page.footer }}
+      </div>
     </footer>
   {% endif %}
 

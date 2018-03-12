@@ -3,81 +3,41 @@
  * @file
  */
 
+require_once 'includes/theme_suggestions.inc';
+require_once 'includes/preprocess.menu.inc';
+require_once 'includes/preprocess.input.inc';
 
 /**
- * Implements hook_theme_suggestions_HOOK_alter().
+ * Implements hook_preprocess_HOOK().
  */
-function adm_theme_theme_suggestions_page_alter(array &$suggestions, array $variables) {
-  if ($node = \Drupal::routeMatch()->getParameter('node')) {
-    // Revision pages have node as a numeric string.
-    if (is_numeric($node)) {
-      $node = \Drupal\node\Entity\Node::load($node);
-    }
-    $content_type = $node->bundle();
-    $suggestions[] = 'page__node__' . $content_type;
+function adm_theme_preprocess_field__field_gallery_items(array &$variables) {
+  $variables['attributes']['class'][] = 'row';
+  $variables['attributes']['class'][] = 'mt-4';
+
+  foreach ($variables['items'] as &$item) {
+    $item['attributes']->addClass('col-sm-6');
+    $item['attributes']->addClass('col-md-6');
+    $item['attributes']->addClass('col-lg-4');
+    $item['attributes']->addClass('mb-3');
   }
 
-  $http_error_suggestions = [
-    'system.401' => 'page__401',
-    'system.403' => 'page__403',
-    'system.404' => 'page__404',
-  ];
-  $route_name = \Drupal::routeMatch()->getRouteName();
-
-  if (isset($http_error_suggestions[$route_name])) {
-    $path_args = explode('/', trim(\Drupal::service('path.current')->getPath(), '/'));
-    $suggestions = theme_get_suggestions($path_args, 'page');
-    $suggestions[] = $http_error_suggestions[$route_name];
-  }
-
-  return $suggestions;
-}
-
-/**
- * Implements hook_theme_suggestions_HOOK_alter().
- */
-function adm_theme_theme_suggestions_form_element_label_alter(array &$suggestions, array $variables) {
-  if (isset($variables['element']['#input_type'])) {
-    $suggestions[] = $variables['theme_hook_original'] . '__' . $variables['element']['#input_type'];
-  }
-}
-
-/**
- * Implements hook_theme_suggestions_HOOK_alter().
- */
-function adm_theme_theme_suggestions_form_element_alter(array &$suggestions, array $variables) {
-  $element = $variables['element'];
-
-  if (isset($element['#type'])) {
-    $suggestions[] = $variables['theme_hook_original'] . '__' . $element['#type'];
-  }
-
-  if (isset($element['#array_parents'])) {
-    $string = implode('_', $element['#array_parents']);
-    $suggestions[] = 'form_element__' . $string;
-  }
-
-  if (isset($element['#form_id'])) {
-    $suggestions[] = 'form_element__' . $element['#form_id'];
-  }
-}
-
-/**
- * Implements hook_theme_suggestions_HOOK_alter().
- */
-function adm_theme_theme_suggestions_image_formatter_alter(array &$suggestions, array $variables) {
-  /** @var \Drupal\image\Plugin\Field\FieldType\ImageItem $item */
-  $item = $variables['item'];
-
-  if (!empty($item)) {
-    $suggestions[] = $variables['theme_hook_original'] . '__' . $item->getFieldDefinition()->getName();
-  }
 }
 
 /**
  * Implements hook_preprocess_HOOK().
  */
-function adm_theme_preprocess_menu__account(array &$variables) {
-  $variables['attributes']['class'][] = 'navbar-nav';
-  $variables['attributes']['class'][] = 'mr-auto';
+function adm_theme_preprocess_field__field_media_image(array &$variables) {
+  $variables['items'][0]['content']['#item_attributes']['class'][] = 'img-thumbnail';
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function adm_theme_preprocess_menu_local_task(array &$variables) {
+  $variables['attributes']['class'][] = 'nav-item';
+  $variables['link']['#attributes']['class'][] = 'nav-link';
+
+  if ($variables['is_active']) {
+    $variables['link']['#attributes']['class'][] = 'active';
+  }
 }

@@ -6,8 +6,11 @@ core: 8.x
 base theme: classy
 
 regions:
-  navbar: Navbar
+  navbar_brand: 'Navbar branding'
+  navbar_items: 'Navbar items'
   header: Header
+  breadcrumb: Breadcrumb
+  highlighted: Highlighted
   content: Content
   sidebar_first: 'First sidebar'
   footer: Footer
@@ -15,4 +18,11 @@ regions:
 libraries:
   - adm_theme/bootstrap-cdn
 
+
+libraries-override:
+  core/normalize:
+    css:
+     base:
+       # BS 4 assumes box-sizing: border-box.
+       assets/vendor/normalize-css/normalize.css: false
 
