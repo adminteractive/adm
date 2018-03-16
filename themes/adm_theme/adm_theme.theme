@@ -4,8 +4,10 @@
  */
 
 require_once 'includes/theme_suggestions.inc';
+require_once 'includes/preprocess.field.inc';
 require_once 'includes/preprocess.menu.inc';
 require_once 'includes/preprocess.input.inc';
+require_once 'includes/preprocess.paragraph.inc';
 
 /**
  * Implements hook_preprocess_HOOK().

@@ -1,12 +1,12 @@
-langcode: et
+langcode: en
 status: true
 dependencies:
   module:
-    - paragraphs
+    - media
     - text
-id: paragraph.field_carousel_item_caption
+id: media.field_carousel_item_caption
 field_name: field_carousel_item_caption
-entity_type: paragraph
+entity_type: media
 type: text_long
 settings: {  }
 module: text

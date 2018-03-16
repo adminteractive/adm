@@ -1,0 +1,60 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.full
+    - field.field.media.carousel_item.field_carousel_item_caption
+    - field.field.media.carousel_item.field_media_image_1
+    - media.type.carousel_item
+  module:
+    - image
+    - text
+    - user
+id: media.carousel_item.full
+targetEntityType: media
+bundle: carousel_item
+mode: full
+content:
+  created:
+    label: hidden
+    type: timestamp
+    weight: 2
+    region: content
+    settings:
+      date_format: medium
+      custom_date_format: ''
+      timezone: ''
+    third_party_settings: {  }
+  field_carousel_item_caption:
+    type: text_default
+    weight: 1
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_media_image_1:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  name:
+    type: string
+    weight: 4
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  uid:
+    label: hidden
+    type: author
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  thumbnail: true

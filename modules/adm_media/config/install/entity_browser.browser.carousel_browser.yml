@@ -1,0 +1,52 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.carousel_item
+    - views.view.carousel_browser
+  module:
+    - dropzonejs_eb_widget
+    - media
+    - views
+name: carousel_browser
+label: 'Carousel browser'
+display: modal
+display_configuration:
+  width: '1024'
+  height: '680'
+  link_text: 'Select item'
+  auto_open: false
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: tabs
+widget_selector_configuration: {  }
+widgets:
+  881feecc-2217-43d8-8338-62f50c44fd6e:
+    settings:
+      view: carousel_browser
+      view_display: media_browser
+      submit_text: 'Select item'
+      auto_select: false
+    uuid: 881feecc-2217-43d8-8338-62f50c44fd6e
+    weight: 1
+    label: Library
+    id: view
+  f7abb2b3-ef57-4b99-aae2-66248412a355:
+    settings:
+      media_type: carousel_item
+      upload_location: 'public://carousel-images'
+      dropzone_description: 'Drop files here to upload them'
+      max_filesize: 32M
+      extensions: 'jpg jpeg gif png'
+      clientside_resize: false
+      resize_width: null
+      resize_height: null
+      resize_quality: !!float 1
+      resize_method: contain
+      thumbnail_method: contain
+      submit_text: 'Select item'
+      auto_select: false
+    uuid: f7abb2b3-ef57-4b99-aae2-66248412a355
+    weight: 2
+    label: Upload
+    id: dropzonejs_media_entity

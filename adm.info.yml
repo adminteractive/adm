@@ -44,6 +44,7 @@ dependencies:
   - toolbar
   - update
   - views
+  - views_ui
   - user
   - text
   - settings_tray

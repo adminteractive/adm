@@ -1,0 +1,37 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.carousel_item.field_carousel_item_caption
+    - field.field.media.carousel_item.field_media_image_1
+    - image.style.carousel_item
+    - media.type.carousel_item
+  module:
+    - image
+    - text
+id: media.carousel_item.default
+targetEntityType: media
+bundle: carousel_item
+mode: default
+content:
+  field_carousel_item_caption:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_media_image_1:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: carousel_item
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+hidden:
+  created: true
+  name: true
+  thumbnail: true
+  uid: true
