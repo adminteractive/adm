@@ -1,0 +1,21 @@
+langcode: et
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.carousel_item.field_carousel_item_caption
+    - paragraphs.paragraphs_type.carousel_item
+  module:
+    - text
+id: paragraph.carousel_item.default
+targetEntityType: paragraph
+bundle: carousel_item
+mode: default
+content:
+  field_carousel_item_caption:
+    weight: 0
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden: {  }

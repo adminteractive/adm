@@ -20,6 +20,19 @@ function adm_theme_preprocess_input(array &$variables) {
   }
 }
 
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function adm_theme_preprocess_textarea(array &$variables) {
+  $variables['attributes']['class'][] = 'form-control';
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function adm_theme_preprocess_select(array &$variables) {
+  $variables['attributes']['class'][] = 'form-control';
+}
 
 /**
  * Implements hook_preprocess_HOOK().

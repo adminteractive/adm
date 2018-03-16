@@ -14,6 +14,8 @@ settings:
         -
           name: Formatting
           items:
+            - Format
+            - Styles
             - Bold
             - Italic
             - Strike
@@ -39,22 +41,18 @@ settings:
             - Table
             - HorizontalRule
         -
-          name: 'Block Formatting'
-          items:
-            - Format
-        -
           name: Tools
           items:
             - ShowBlocks
             - Source
   plugins:
-    language:
-      language_list: un
-    stylescombo:
-      styles: ''
     drupallink:
       linkit_enabled: true
       linkit_profile: default
+    stylescombo:
+      styles: "a.btn.btn-primary|Button primary\r\na.btn.btn-secondary|Button secondary\r\na.btn.btn-primary|Button outline primary\r\na.btn.btn-secondary|Button outline secondary\r\np.lead|Lead"
+    language:
+      language_list: un
 image_upload:
   status: true
   scheme: public
