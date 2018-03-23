@@ -1,0 +1,9 @@
+name: ADM Webform
+description: 'Webform integration module'
+type: module
+core: 8.x
+
+dependencies:
+  - webform:webform
+  - webform:webform_ui
+
