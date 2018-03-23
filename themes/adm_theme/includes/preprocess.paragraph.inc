@@ -1,16 +1,75 @@
 <?php
 
 use Drupal\Component\Utility\Html;
+use Drupal\Core\Render\Element;
+use Drupal\Core\Template\Attribute;
 
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function adm_theme_preprocess_paragraph(array &$variables) {
+  // Wrap paragraph into specialized container.
+  if (!isset($variables['container_wrap'])) {
+    // Sometimes we don't need wrapper, then we set it FALSE.
+    // @see adm_theme_preprocess_paragraph__carousel().
+    $variables['container_wrap'] = TRUE;
+  }
+
+  // Set default attributes.
+  $default_attributes = [
+    'class' => ['container', 'mb-5'],
+  ];
+
+  $variables['container_attributes'] = new Attribute($default_attributes);
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function adm_theme_preprocess_paragraph__accordion(array &$variables) {
+  $id = Html::getUniqueId('accordion');
+  $variables['attributes']['id'] = $id;
+  $content = &$variables['content'];
+
+  if (!empty($content['field_accordion_item'])) {
+    foreach (Element::children($content['field_accordion_item']) as $delta) {
+      $content['field_accordion_item'][$delta]['#attributes']['data-parent'] = $id;
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function adm_theme_preprocess_paragraph__accordion_item(array &$variables) {
+  // We don't need wrapper, disable it.
+  $variables['container_wrap'] = FALSE;
+  $variables['attributes']['class'][] = 'card';
+
+  if (!empty($variables['attributes']['id'])) {
+    $parent_id = $variables['attributes']['data-parent'];
+
+    $title_id = Html::getUniqueId($parent_id . '-title');
+    $body_id = Html::getUniqueId($parent_id . '-body');
+    $variables['content']['field_accordion_item_title']['#attributes']['id'] = $title_id;
+    $variables['content']['field_accordion_item_title']['#content_attributes']['data-target'] = '#' . $body_id;
+    $variables['content']['field_accordion_item_body']['#attributes']['id'] = $body_id;
+    $variables['content']['field_accordion_item_body']['#content_attributes']['aria-labelledby'] = $title_id;
+  }
+}
 
 /**
  * Implements hook_preprocess_HOOK().
  */
 function adm_theme_preprocess_paragraph__carousel(array &$variables) {
+  // We don't need wrapper, disable it.
+  $variables['container_wrap'] = FALSE;
+
   /** @var \Drupal\paragraphs\Entity\Paragraph $paragraph */
   $paragraph = $variables['elements']['#paragraph'];
   $variables['attributes']['class'][] = 'carousel';
   $variables['attributes']['class'][] = 'slide';
+  $variables['attributes']['class'][] = 'mb-5';
   $variables['attributes']['data-ride'][] = 'carousel';
 
   if (!isset($variables['attributes']['id'])) {
@@ -28,7 +87,7 @@ function adm_theme_preprocess_paragraph__carousel(array &$variables) {
         'data-slide-to' => $i,
         'data-target' => '#' . $html_id,
       ],
-      '#value' => 'sdsds',
+      '#value' => '',
     ];
   }
 

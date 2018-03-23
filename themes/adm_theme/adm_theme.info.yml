@@ -11,7 +11,9 @@ regions:
   header: Header
   breadcrumb: Breadcrumb
   highlighted: Highlighted
+  content_top: 'Content top'
   content: Content
+  content_bottom: 'Content bottom'
   sidebar_first: 'First sidebar'
   footer: Footer
 

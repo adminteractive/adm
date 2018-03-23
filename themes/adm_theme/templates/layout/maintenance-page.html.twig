@@ -9,34 +9,32 @@
  * @see template_preprocess_maintenance_page()
  */
 #}
-<div class="layout-container">
 
-  <header role="banner">
-    {% if logo %}
-      <a href="{{ front_page }}" title="{{ 'Home'|t }}" rel="home">
-        <img src="{{ logo }}" alt="{{ 'Home'|t }}"/>
-      </a>
-    {% endif %}
+<header role="banner">
 
-    {% if site_name or site_slogan %}
-      <div class="name-and-slogan">
-        {% if site_name %}
-         <h1 class="site-name">
-           <a href="{{ front_page }}" title="{{ 'Home'|t }}" rel="home">{{ site_name }}</a>
-         </h1>
-        {% endif %}
 
-        {% if site_slogan %}
-          <div class="site-slogan">{{ site_slogan }}</div>
-        {% endif %}
-      </div>{# /.name-and-slogan #}
-    {% endif %}
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
 
-  </header>
+      {% if site_name %}
+        <div class="site-name">
+          <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home" class="navbar-brand">
+            {% if logo %}
+              <img src="{{ logo }}" alt="{{ 'Home'|t }}" class="d-inline-block align-top" height="30" />
+            {% endif %}
+            {{ site_name }}</a>
+        </div>
+      {% endif %}
 
+    </div>
+  </nav>
+
+</header>
+
+<div class="layout-container container">
   <main role="main">
     {% if title %}
-      <h1>{{ title }}</h1>
+      <h1 class="mt-5 display-3">{{ title }}</h1>
     {% endif %}
 
     {{ page.highlighted }}

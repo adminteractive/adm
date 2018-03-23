@@ -39,7 +39,7 @@ function adm_theme_preprocess_menu_local_task(array &$variables) {
   $variables['attributes']['class'][] = 'nav-item';
   $variables['link']['#attributes']['class'][] = 'nav-link';
 
-  if ($variables['is_active']) {
+  if (!empty($variables['is_active'])) {
     $variables['link']['#attributes']['class'][] = 'active';
   }
 }

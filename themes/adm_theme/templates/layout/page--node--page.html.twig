@@ -68,21 +68,9 @@
 
     {{ page.content_top }}
 
-    <div class="container mt-5">
-      <div class="row">
-
-        <div class="layout-content {{ page.sidebar_first ? 'col-md-9' : 'col-md-12' }}">
-          {{ page.content }}
-        </div>{# /.layout-content #}
-
-        {% if page.sidebar_first %}
-          <aside class="layout-sidebar-first col-md-3" role="complementary">
-            {{ page.sidebar_first }}
-          </aside>
-        {% endif %}
-
-      </div>
-    </div>
+    <div class="layout-content">
+      {{ page.content }}
+    </div>{# /.layout-content #}
 
     {{ page.content_bottom }}
 
