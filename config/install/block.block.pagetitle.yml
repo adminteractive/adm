@@ -1,11 +1,13 @@
 langcode: en
 status: true
 dependencies:
+  module:
+    - system
   theme:
     - adm_theme
 id: pagetitle
 theme: adm_theme
-region: content
+region: content_top
 weight: -3
 provider: null
 plugin: page_title_block
@@ -14,4 +16,9 @@ settings:
   label: 'Page title'
   provider: core
   label_display: '0'
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: true
+    context_mapping: {  }

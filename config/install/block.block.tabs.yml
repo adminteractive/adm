@@ -1,11 +1,13 @@
 langcode: en
 status: true
 dependencies:
+  module:
+    - system
   theme:
     - adm_theme
 id: tabs
 theme: adm_theme
-region: content
+region: content_top
 weight: -2
 provider: null
 plugin: local_tasks_block
@@ -16,4 +18,9 @@ settings:
   label_display: '0'
   primary: true
   secondary: true
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: true
+    context_mapping: {  }
