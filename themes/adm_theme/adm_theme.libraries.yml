@@ -10,4 +10,5 @@ bootstrap-cdn:
       //maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css: { type: external, minified: true }
   js:
     //maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js: { type: external, minified: true }
-
+  dependencies:
+    - core/jquery

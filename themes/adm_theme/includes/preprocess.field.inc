@@ -76,3 +76,52 @@ function adm_theme_preprocess_field__field_documents_list_items(array &$variable
     $item['attributes']->addClass('list-group-item');
   }
 }
+
+function adm_theme_preprocess_field__field_tab_item(array &$variables) {
+  $variables['attributes']['class'][] = 'tab-content';
+
+  $tabs = [
+    '#theme' => 'links__tabs',
+    '#attributes' => [
+      'class' => ['nav', 'nav-tabs'],
+    ],
+    '#links' => [],
+  ];
+
+  foreach ($variables['items'] as $delta => &$item) {
+    /** @var \Drupal\paragraphs\Entity\Paragraph $item_paragraph */
+    $item_paragraph = $item['content']['#paragraph'];
+    $item_title = $item_paragraph->get('field_tab_item_title')->value;
+    $transliterated = \Drupal::transliteration()->transliterate($item_title);
+    $element_id = Html::getUniqueId($transliterated);
+    $url = \Drupal\Core\Url::fromUserInput('#' . $element_id);
+
+    $link = [
+      'title' => $item_title,
+      'url' => $url,
+      'attributes' => [
+        'class' => ['nav-link'],
+        'id' => 'tab-' . $element_id,
+        'data-toggle' => 'tab',
+        'role' => 'tab',
+        'aria-selected' => 'false',
+      ]
+    ];
+
+    if ($delta === 0) {
+      $link['attributes']['class'][] = 'active';
+
+      $item['attributes']->addClass(['active', 'show']);
+    }
+
+    $tabs['#links'][] = $link;
+
+    $item['attributes']->setAttribute('id', $element_id);
+    $item['attributes']->setAttribute('role', 'tabpanel');
+    $item['attributes']->setAttribute('aria-labelledby', 'tab-' . $element_id);
+    $item['attributes']->addClass(['tab-pane', 'fade']);
+
+  }
+
+  $variables['tabs'] = $tabs;
+}

@@ -125,3 +125,13 @@ function adm_theme_preprocess_paragraph__carousel(array &$variables) {
 
   $variables['content'][] = $arrows;
 }
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function adm_theme_preprocess_paragraph__tab_item(array &$variables) {
+  // Disable container.
+  $variables['container_wrap'] = FALSE;
+
+  $variables['attributes']['class'][] = 'mt-3';
+}
