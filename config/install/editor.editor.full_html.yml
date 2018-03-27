@@ -50,7 +50,7 @@ settings:
       linkit_enabled: true
       linkit_profile: default
     stylescombo:
-      styles: "a.btn.btn-primary|Button primary\r\na.btn.btn-secondary|Button secondary\r\na.btn.btn-primary|Button outline primary\r\na.btn.btn-secondary|Button outline secondary\r\np.lead|Lead"
+      styles: "a.btn.btn-primary|Button primary\r\na.btn.btn-secondary|Button secondary\r\na.btn.btn-outline-primary|Button outline primary\r\na.btn.btn-outline-secondary|Button outline secondary\r\np.lead|Lead"
     language:
       language_list: un
 image_upload:

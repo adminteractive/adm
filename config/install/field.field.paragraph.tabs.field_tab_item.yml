@@ -1,0 +1,42 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tab_item
+    - paragraphs.paragraphs_type.tab_item
+    - paragraphs.paragraphs_type.tabs
+  module:
+    - entity_reference_revisions
+id: paragraph.tabs.field_tab_item
+field_name: field_tab_item
+entity_type: paragraph
+bundle: tabs
+label: 'Tab item'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      tab_item: tab_item
+    target_bundles_drag_drop:
+      accordion:
+        weight: 6
+        enabled: false
+      accordion_item:
+        weight: 7
+        enabled: false
+      tab_item:
+        enabled: true
+        weight: 8
+      tabs:
+        weight: 9
+        enabled: false
+      text_section:
+        weight: 10
+        enabled: false
+field_type: entity_reference_revisions
