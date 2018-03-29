@@ -125,3 +125,38 @@ function adm_theme_preprocess_field__field_tab_item(array &$variables) {
 
   $variables['tabs'] = $tabs;
 }
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function adm_theme_preprocess_field__field_gallery_items(array &$variables) {
+  $variables['attributes']['class'][] = 'row';
+  $variables['attributes']['class'][] = 'mt-4';
+  $variables['attributes']['class'][] = 'photoswipe-gallery';
+
+  foreach ($variables['items'] as &$item) {
+    $item['attributes']->addClass('col-sm-6');
+    $item['attributes']->addClass('col-md-6');
+    $item['attributes']->addClass('col-lg-3');
+    $item['attributes']->addClass('mb-3');
+  }
+
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function adm_theme_preprocess_field__field_media_image(array &$variables) {
+  // Move photoswipe gallery class few levels up.
+  // @see adm_theme_preprocess_field__field_gallery_items().
+  if (($key = array_search('photoswipe-gallery', $variables['attributes']['class'])) !== false) {
+    unset($variables['attributes']['class'][$key]);
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function adm_theme_preprocess_image(array &$variables) {
+  $variables['attributes']['class'][] = 'img-fluid';
+}

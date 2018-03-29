@@ -4,6 +4,7 @@
  * Implements hook_theme_suggestions_HOOK_alter().
  */
 function adm_theme_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+
   if ($node = \Drupal::routeMatch()->getParameter('node')) {
     // Revision pages have node as a numeric string.
     if (is_numeric($node)) {
