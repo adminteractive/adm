@@ -17,8 +17,8 @@ translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
-  file_extensions: 'txt doc docx pdf'
-  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_directory: 'documents/[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'txt doc xls pdf ppt pps odt ods odp docx xlsx pptx rtf'
   max_filesize: ''
   description_field: false
   handler: 'default:file'

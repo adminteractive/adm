@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.document
+  module:
+    - entity_embed
+    - media
+label: Document
+id: media_document
+type_id: entity
+type_settings:
+  entity_type: media
+  bundles:
+    - document
+  display_plugins: {  }
+  entity_browser: editor_document_browser
+  entity_browser_settings:
+    display_review: true
+icon_uuid: null

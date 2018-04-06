@@ -1,9 +1,9 @@
-langcode: et
+langcode: en
 status: true
 dependencies:
   module:
     - media
-id: media.embed
-label: Embed
+id: media.file_link
+label: 'File link'
 targetEntityType: media
 cache: true

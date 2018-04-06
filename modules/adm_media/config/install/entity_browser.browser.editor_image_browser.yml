@@ -1,0 +1,30 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.media_browser
+  module:
+    - views
+name: editor_image_browser
+label: 'Editor Image browser'
+display: iframe
+display_configuration:
+  width: '1024'
+  height: '680'
+  link_text: 'Select images'
+  auto_open: true
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: tabs
+widget_selector_configuration: {  }
+widgets:
+  f95a47dc-d63b-4d92-a36f-9152c392bfcd:
+    settings:
+      view: media_browser
+      view_display: images_browser
+      submit_text: 'Select entities'
+      auto_select: false
+    uuid: f95a47dc-d63b-4d92-a36f-9152c392bfcd
+    weight: 1
+    label: Library
+    id: view

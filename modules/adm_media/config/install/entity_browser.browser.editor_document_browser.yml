@@ -1,4 +1,4 @@
-langcode: et
+langcode: en
 status: true
 dependencies:
   config:
@@ -8,30 +8,30 @@ dependencies:
     - dropzonejs_eb_widget
     - media
     - views
-name: documents_browser
-label: 'Documents browser'
-display: modal
+name: editor_document_browser
+label: 'Editor Document browser'
+display: iframe
 display_configuration:
   width: '1024'
   height: '680'
   link_text: 'Select documents'
-  auto_open: false
+  auto_open: true
 selection_display: no_display
 selection_display_configuration: {  }
 widget_selector: tabs
 widget_selector_configuration: {  }
 widgets:
-  74162e4c-2a8a-45f3-8154-48cbadfa190e:
+  b527bad6-745c-42bd-a7e0-07ce443b0e10:
     settings:
       view: media_browser
       view_display: entity_browser_1
       submit_text: 'Select documents'
       auto_select: false
-    uuid: 74162e4c-2a8a-45f3-8154-48cbadfa190e
+    uuid: b527bad6-745c-42bd-a7e0-07ce443b0e10
     weight: 1
     label: Library
     id: view
-  cb81657b-a142-480f-b96b-4fdcfe628811:
+  5a4dcc46-1df1-41f1-954d-2ae9f9fdcbe2:
     settings:
       media_type: document
       upload_location: 'public://documents/[date:custom:Y]-[date:custom:m]'
@@ -44,9 +44,9 @@ widgets:
       resize_quality: !!float 1
       resize_method: contain
       thumbnail_method: contain
-      submit_text: 'Select documents'
+      submit_text: 'Select entities'
       auto_select: false
-    uuid: cb81657b-a142-480f-b96b-4fdcfe628811
+    uuid: 5a4dcc46-1df1-41f1-954d-2ae9f9fdcbe2
     weight: 2
     label: Upload
     id: dropzonejs_media_entity
