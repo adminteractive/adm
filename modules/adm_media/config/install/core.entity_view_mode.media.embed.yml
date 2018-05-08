@@ -1,9 +1,9 @@
-langcode: en
-status: false
+langcode: et
+status: true
 dependencies:
   module:
     - media
-id: media.full
-label: 'Full content'
+id: media.embed
+label: Embed
 targetEntityType: media
 cache: true

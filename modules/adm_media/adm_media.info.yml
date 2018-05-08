@@ -9,5 +9,7 @@ dependencies:
   - dropzonejs:dropzonejs_eb_widget
   - entity_browser:entity_browser
   - entity_browser_enhanced:entity_browser_enhanced
+  - entity_embed:entity_embed
+  - embed:embed
   - photoswipe:photoswipe
   - video_embed_field:video_embed_media
