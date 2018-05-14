@@ -4,11 +4,12 @@ type: profile
 description: 'ADM Interactive Drupal distribution.'
 distribution:
   name: ADM
-
-# Namespaces are not yet supported by profiles
-# See https://www.drupal.org/project/drupal/issues/2855026
+package: ADM
 dependencies:
-  # Core dependencies
+  - adm_core
+  - admin_toolbar
+  - admin_toolbar_links_access_filter
+  - admin_toolbar_tools
   - automated_cron
   - big_pipe
   - block
@@ -22,47 +23,42 @@ dependencies:
   - dblog
   - dynamic_page_cache
   - editor
-  - filter
+  - editor_advanced_link
   - entity_reference
   - field
   - field_ui
   - file
+  - filter
   - help
   - image
+  - linkit
   - menu_link_content
   - menu_ui
   - node
   - options
   - page_cache
+  - paragraphs
   - path
+  - pathauto
   - quickedit
+  - recreate_block_content
   - search
+  - settings_tray
   - shortcut
+  - smart_trim
   - syslog
+  - system
   - taxonomy
   - telephone
+  - text
+  - token
   - toolbar
   - update
+  - user
   - views
   - views_ui
-  - user
-  - text
-  - settings_tray
-
-  # Contrib dependencies
-  - admin_toolbar
-  - admin_toolbar_tools
-  - admin_toolbar_links_access_filter
-  - editor_advanced_link
-  - token
-  - smart_trim
-  - linkit
-  - paragraphs
-  - pathauto
-  - recreate_block_content
   - webform
   - webform_ui
-
 themes:
-  - seven
   - adm_theme
+  - seven

@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies: {  }
 id: text_section
-label: Text section
+label: 'Text section'
 icon_uuid: null
 description: ''
 behavior_plugins: {  }

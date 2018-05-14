@@ -3,8 +3,6 @@ status: true
 dependencies:
   config:
     - media.type.image
-  content:
-    - 'file:file:19783e6d-ad6c-4b77-9c8d-0df92dfc5c44'
   module:
     - entity_embed
     - media

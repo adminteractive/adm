@@ -1,0 +1,22 @@
+bundle: adm
+excluded:
+  - block.block.mainnavigation
+  - block.block.useraccountmenu
+  - block.block.mainpagecontent
+  - block.block.messages
+  - block.block.pagetitle
+  - block.block.seven_breadcrumbs
+  - block.block.seven_content
+  - block.block.seven_help
+  - block.block.seven_local_actions
+  - block.block.seven_login
+  - block.block.seven_messages
+  - block.block.seven_page_title
+  - block.block.seven_primary_local_tasks
+  - block.block.seven_secondary_local_tasks
+  - block.block.sitebranding
+  - block.block.tabs
+  - views.view.glossary
+  - seven.settings
+  - system.cron
+  - system.theme
