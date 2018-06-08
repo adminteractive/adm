@@ -7,6 +7,9 @@ distribution:
 package: ADM
 dependencies:
   - adm_core
+  - adm_page
+  - adm_site
+  - adm_user
   - admin_toolbar
   - admin_toolbar_links_access_filter
   - admin_toolbar_tools
