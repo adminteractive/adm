@@ -62,15 +62,4 @@ function adm_install() {
   \Drupal::configFactory()->getEditable('system.theme')->set('admin', 'seven')->save(TRUE);
   // Enable the front-end theme.
   \Drupal::configFactory()->getEditable('system.theme')->set('default', 'adm_theme')->save(TRUE);
-
-  // Todo these details should come through installation wizard.
-  $editor = User::create([
-    'name' => 'editor',
-    'mail' => 'editor@dev',
-    'roles' => ['editor'],
-    // Not secure, but the account is disabled by default.
-    'password' => 'editor',
-  ]);
-
-  $editor->save();
 }
