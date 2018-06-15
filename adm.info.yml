@@ -43,7 +43,6 @@ dependencies:
   - paragraphs
   - path
   - pathauto
-  - quickedit
   - recreate_block_content
   - search
   - settings_tray
