@@ -1,4 +1,4 @@
-langcode: en
+langcode: et
 status: true
 dependencies:
   config:
@@ -10,7 +10,7 @@ id: paragraph.text_section.field_text_section_content
 field_name: field_text_section_content
 entity_type: paragraph
 bundle: text_section
-label: Content
+label: Sisu
 description: ''
 required: true
 translatable: false

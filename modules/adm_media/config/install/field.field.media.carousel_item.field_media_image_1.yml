@@ -1,4 +1,4 @@
-langcode: en
+langcode: et
 status: true
 dependencies:
   config:
@@ -10,7 +10,7 @@ id: media.carousel_item.field_media_image_1
 field_name: field_media_image_1
 entity_type: media
 bundle: carousel_item
-label: Image
+label: Pilt
 description: ''
 required: true
 translatable: true

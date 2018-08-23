@@ -15,12 +15,14 @@ content:
   field_media_file:
     weight: 0
     label: hidden
-    settings: {  }
+    settings:
+      use_description_as_link_text: true
     third_party_settings: {  }
-    type: file_url_plain
+    type: file_default
     region: content
 hidden:
   created: true
+  langcode: true
   name: true
   thumbnail: true
   uid: true

@@ -1,4 +1,4 @@
-langcode: en
+langcode: et
 status: true
 dependencies:
   config:
@@ -10,7 +10,7 @@ id: media.carousel_item.field_carousel_item_caption
 field_name: field_carousel_item_caption
 entity_type: media
 bundle: carousel_item
-label: Caption
+label: Pealkiri
 description: ''
 required: false
 translatable: false

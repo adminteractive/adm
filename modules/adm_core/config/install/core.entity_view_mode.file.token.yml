@@ -1,9 +1,9 @@
-langcode: en
+langcode: et
 status: true
 dependencies:
   module:
     - file
 id: file.token
-label: Token
+label: Tekstiasendaja
 targetEntityType: file
 cache: true

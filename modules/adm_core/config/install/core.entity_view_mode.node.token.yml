@@ -1,9 +1,9 @@
-langcode: en
+langcode: et
 status: true
 dependencies:
   module:
     - node
 id: node.token
-label: Token
+label: Tekstiasendaja
 targetEntityType: node
 cache: true

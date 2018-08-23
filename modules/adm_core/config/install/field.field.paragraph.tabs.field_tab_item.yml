@@ -1,4 +1,4 @@
-langcode: en
+langcode: et
 status: true
 dependencies:
   config:
@@ -38,5 +38,23 @@ settings:
         enabled: false
       text_section:
         weight: 10
+        enabled: false
+      carousel:
+        weight: 12
+        enabled: false
+      document_list:
+        weight: 13
+        enabled: false
+      gallery:
+        weight: 14
+        enabled: false
+      media_item:
+        weight: 15
+        enabled: false
+      from_library:
+        weight: 16
+        enabled: false
+      grid:
+        weight: 18
         enabled: false
 field_type: entity_reference_revisions

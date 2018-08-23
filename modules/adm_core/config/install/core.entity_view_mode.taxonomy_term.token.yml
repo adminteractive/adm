@@ -1,9 +1,9 @@
-langcode: en
+langcode: et
 status: true
 dependencies:
   module:
     - taxonomy
 id: taxonomy_term.token
-label: Token
+label: Tekstiasendaja
 targetEntityType: taxonomy_term
 cache: true

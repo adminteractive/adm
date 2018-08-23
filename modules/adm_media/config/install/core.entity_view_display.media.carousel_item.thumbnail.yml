@@ -1,4 +1,4 @@
-langcode: en
+langcode: et
 status: true
 dependencies:
   config:
@@ -27,5 +27,6 @@ hidden:
   created: true
   field_carousel_item_caption: true
   field_media_image_1: true
+  langcode: true
   name: true
   uid: true

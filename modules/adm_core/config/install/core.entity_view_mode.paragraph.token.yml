@@ -1,9 +1,9 @@
-langcode: en
+langcode: et
 status: true
 dependencies:
   module:
     - paragraphs
 id: paragraph.token
-label: Token
+label: Tekstiasendaja
 targetEntityType: paragraph
 cache: true

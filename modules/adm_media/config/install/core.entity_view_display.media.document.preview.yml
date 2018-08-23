@@ -33,4 +33,5 @@ content:
 hidden:
   created: true
   field_media_file: true
+  langcode: true
   uid: true

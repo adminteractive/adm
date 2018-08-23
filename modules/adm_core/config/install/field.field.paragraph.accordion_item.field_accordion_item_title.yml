@@ -1,4 +1,4 @@
-langcode: en
+langcode: et
 status: true
 dependencies:
   config:
@@ -8,7 +8,7 @@ id: paragraph.accordion_item.field_accordion_item_title
 field_name: field_accordion_item_title
 entity_type: paragraph
 bundle: accordion_item
-label: Title
+label: Pealkiri
 description: ''
 required: true
 translatable: false

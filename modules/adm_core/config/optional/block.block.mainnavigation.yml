@@ -1,4 +1,4 @@
-langcode: en
+langcode: et
 status: true
 dependencies:
   config:
@@ -10,7 +10,7 @@ dependencies:
 id: mainnavigation
 theme: adm_theme
 region: navbar_items
-weight: 0
+weight: -3
 provider: null
 plugin: 'system_menu_block:main'
 settings:

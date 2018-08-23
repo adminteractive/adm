@@ -33,5 +33,6 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
+  langcode: true
   name: true
   uid: true

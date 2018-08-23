@@ -1,9 +1,9 @@
-langcode: en
+langcode: et
 status: true
 dependencies:
   module:
     - menu_link_content
 id: menu_link_content.token
-label: Token
+label: Tekstiasendaja
 targetEntityType: menu_link_content
 cache: true
