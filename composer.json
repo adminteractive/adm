@@ -49,7 +49,8 @@
         "drupal/entity_browser_enhanced": "dev-1.x",
         "drupal/entity_embed": "dev-1.x",
         "drupal/entity_usage": "^2.0@alpha",
-        "drupal/video_embed_field": "dev-2.x"
+        "drupal/video_embed_field": "dev-2.x",
+        "drupal/features": "^3.7"
     },
     "require-dev": {
         "behat/mink": "~1.7",
