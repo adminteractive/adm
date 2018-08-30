@@ -5,7 +5,6 @@ dependencies:
     - field.storage.paragraph.field_grid_items
     - paragraphs.paragraphs_type.from_library
     - paragraphs.paragraphs_type.grid
-    - paragraphs.paragraphs_type.media_item
     - paragraphs.paragraphs_type.text_section
   module:
     - entity_reference_revisions
@@ -25,7 +24,6 @@ settings:
     negate: 0
     target_bundles:
       from_library: from_library
-      media_item: media_item
       text_section: text_section
     target_bundles_drag_drop:
       grid:
@@ -49,9 +47,6 @@ settings:
       gallery:
         weight: 18
         enabled: false
-      media_item:
-        enabled: true
-        weight: 19
       tab_item:
         weight: 20
         enabled: false
