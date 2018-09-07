@@ -12,6 +12,7 @@ dependencies:
   - field
   - file
   - image
+  - image_resize_filter
   - media
   - paragraphs
   - path
