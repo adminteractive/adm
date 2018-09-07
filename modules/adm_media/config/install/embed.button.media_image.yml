@@ -4,6 +4,7 @@ dependencies:
   config:
     - media.type.image
   module:
+    - adm_media
     - entity_embed
     - media
 label: Pilt
@@ -14,9 +15,9 @@ type_settings:
   bundles:
     - image
   display_plugins:
-    - 'view_mode:media.full'
-    - 'view_mode:media.thumbnail'
+    - 'entity_reference:adm_media_thumbnail'
   entity_browser: editor_image_browser
   entity_browser_settings:
-    display_review: true
-icon_uuid: 19783e6d-ad6c-4b77-9c8d-0df92dfc5c44
+    display_review: false
+icon_uuid: null
+icon_path: /profiles/adm/modules/adm_media/images/image.png
