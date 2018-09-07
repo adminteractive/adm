@@ -24,3 +24,78 @@ function adm_media_form_alter(&$form, FormStateInterface &$form_state, $form_id)
     $form['actions']['submit']['#attributes']['class'][] = 'entity-browser-modal-target';
   }
 }
+
+/**
+ * Implements hook_form_FORM_ID_alter()
+ */
+function adm_media_form_entity_embed_dialog_alter(&$form, FormStateInterface $form_state, $form_id) {
+  $storage = $form_state->getStorage();
+  /** @var \Drupal\media\Entity\Media $entity */
+  $entity = $storage['entity'];
+  /** @var \Drupal\embed\Entity\EmbedButton $embed_button */
+  $embed_button = $storage['embed_button'];
+
+  if ($entity !== NULL) {
+    /** @var \Drupal\file\Entity\File $file */
+    $file = $entity->get('thumbnail')->entity;
+    $image_style = \Drupal\image\Entity\ImageStyle::load('thumbnail');
+    if ($image_style !== NULL) {
+      $image_style_url = $image_style->buildUri($file->getFileUri());
+      $url = file_create_url($image_style_url);
+      $image_style->createDerivative($file->getFileUri(), $image_style_url);
+      // TODO it should be converted to render array.
+      $form['entity']['#markup'] = '<a href="' . $entity->url() . '" title="' . $entity->label() . '"><img src="' . $url .'" alt="' . $entity->label() . '" /></a>';
+    }
+  }
+
+  if (isset($form['attributes']['data-entity-embed-display-settings']) && in_array('image', $embed_button->type_settings['bundles'], TRUE)) {
+    $entity_element = $form_state->get('entity_element');
+    if (isset($entity_element['data-entity-embed-display-settings']) && !is_array($entity_element['data-entity-embed-display-settings'])) {
+      $entity_element['data-entity-embed-display-settings'] = Json::decode($entity_element['data-entity-embed-display-settings']);
+    }
+    if (isset($form['attributes']['data-entity-embed-display-settings']['image_link'])) {
+      $form['attributes']['data-entity-embed-display-settings']['image_link']['#type'] = 'hidden';
+      $form['attributes']['data-entity-embed-display-settings']['image_link']['#value'] = '';
+
+      $form['attributes']['data-entity-embed-display-settings']['image_target']['#type'] = 'hidden';
+      $form['attributes']['data-entity-embed-display-settings']['image_target']['#value'] = '';
+    }
+
+    $form['attributes']['data-entity-embed-display-settings']['link'] = [
+      '#type' => 'fieldset',
+      '#title' => t('Link')
+    ];
+    // TODO cannot use linkit here, for some reason it removes data-entity-embed-display value.
+    $form['attributes']['data-entity-embed-display-settings']['link']['link_url'] = [
+      '#title' => t('Url'),
+      '#description' => t('The URL you would like this item to link to.  Leave blank for none.'),
+      '#type' => 'textfield',
+      '#default_value' => isset($entity_element['data-entity-embed-display-settings']['link']['link_url']) ? Html::decodeEntities($entity_element['data-entity-embed-display-settings']['link']['link_url']) : '',
+    ];
+
+    $form['attributes']['data-entity-embed-display-settings']['link']['link_target'] = [
+      '#title' => t('Open in new tab'),
+      '#type' => 'checkbox',
+      '#default_value' => isset($entity_element['data-entity-embed-display-settings']['link']['link_target']) ? Html::decodeEntities($entity_element['data-entity-embed-display-settings']['link']['link_target']) : '',
+    ];
+  }
+}
+
+/**
+ * Implements hook_theme_registry_alter()
+ */
+function adm_media_theme_registry_alter(&$theme_registry) {
+  $theme_registry['entity_embed_container']['path'] = drupal_get_path('module', 'adm_media') . '/templates';
+}
+
+/**
+ * Implements hook_preprocess_HOOK()
+ */
+function adm_media_preprocess_entity_embed_container(&$variables) {
+  $variables['url'] = isset($variables['element']['#context']['data-entity-embed-display-settings']['link']['link_url']) ? UrlHelper::filterBadProtocol($variables['element']['#context']['data-entity-embed-display-settings']['link']['link_url']) : '';
+  $variables['link_attributes'] = new \Drupal\Core\Template\Attribute();
+
+  if (!empty($variables['element']['#context']['data-entity-embed-display-settings']['link']['link_target'])) {
+    $variables['link_attributes']->setAttribute('target', '_blank');
+  }
+}

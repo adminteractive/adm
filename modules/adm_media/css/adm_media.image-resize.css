@@ -1,0 +1,23 @@
+.adm-media--dimensions .fieldset-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.adm-media--dimensions .description {
+  width: 100%;
+}
+
+.adm-media--controls {
+  display: flex;
+  align-items: flex-end;
+  padding-left: 1em;
+  margin: 0.75em 0;
+}
+
+.adm-media--controls a {
+  display: inline-block;
+}
+
+.adm-media--dimensions .form-item {
+  padding-right: 1em;
+}

@@ -5,3 +5,11 @@ view:
   dependencies:
     - core/jquery
     - core/drupal
+image-resize:
+  css:
+    theme:
+      css/adm_media.image-resize.css: {}
+  js:
+    js/adm_media.image-resize.js: {}
+  dependencies:
+  - core/jquery
