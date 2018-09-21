@@ -3,6 +3,7 @@ description: 'Media management'
 type: module
 core: 8.x
 dependencies:
+  - adm_media
   - dropzonejs
   - dropzonejs_eb_widget
   - embed
