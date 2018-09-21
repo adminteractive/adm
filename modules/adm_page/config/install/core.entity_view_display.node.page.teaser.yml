@@ -17,4 +17,3 @@ content:
     region: content
 hidden:
   field_page_components: true
-  langcode: true

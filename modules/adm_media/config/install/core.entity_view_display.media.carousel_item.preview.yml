@@ -26,7 +26,6 @@ content:
 hidden:
   created: true
   field_carousel_item_caption: true
-  langcode: true
   name: true
   thumbnail: true
   uid: true
