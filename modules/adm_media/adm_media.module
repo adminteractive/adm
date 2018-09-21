@@ -3,6 +3,8 @@
  * @file
  */
 
+use Drupal\Component\Utility\Html;
+use Drupal\Component\Utility\UrlHelper;
 use Drupal\Core\Form\FormStateInterface;
 
 /**
@@ -17,7 +19,7 @@ function adm_media_preprocess_views_view(&$variables) {
 /**
  * Implements hook_form_alter().
  */
-function adm_media_form_alter(&$form, FormStateInterface &$form_state, $form_id) {
+function adm_media_form_alter(&$form, FormStateInterface $form_state, $form_id) {
   if (strpos($form_id, 'entity_browser') === 0 && !empty($form['widget']['view'])) {
     // Style the submit button.
     $form['actions']['submit']['#value'] = t('Select media');
