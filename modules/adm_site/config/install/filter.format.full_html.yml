@@ -3,6 +3,8 @@ status: true
 dependencies:
   module:
     - editor
+    - entity_embed
+    - image_resize_filter
     - linkit
 name: 'Full HTML'
 format: full_html
@@ -48,3 +50,18 @@ filters:
     weight: 0
     settings:
       title: true
+  entity_embed:
+    id: entity_embed
+    provider: entity_embed
+    status: true
+    weight: 0
+    settings: {  }
+  filter_image_resize:
+    id: filter_image_resize
+    provider: image_resize_filter
+    status: true
+    weight: 0
+    settings:
+      image_locations:
+        local: true
+        remote: false

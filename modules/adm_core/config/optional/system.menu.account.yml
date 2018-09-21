@@ -1,7 +1,7 @@
-langcode: et
+langcode: en
 status: true
 dependencies: {  }
 id: account
-label: 'Kasutaja konto menüü'
-description: 'Aktiivse kasutajaga seotud lingid'
+label: 'User account menu'
+description: 'Links related to the active user account'
 locked: true
