@@ -102,9 +102,6 @@
             },
             "drupal/embed": {
                 "Non-managed file as button icon": "https://www.drupal.org/files/issues/2018-07-03/embed-allow-non-managed-button-icon-files-2824110-9.patch"
-            },
-            "drupal/features": {
-                "Fatal error fix": "https://www.drupal.org/files/issues/2018-08-15/2992790-drupal-component-namespace-case.patch"
             }
         }
     }
