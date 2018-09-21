@@ -8,5 +8,6 @@ dependencies:
   - node
   - paragraphs
   - path
+  - pathauto
   - user
 package: ADM

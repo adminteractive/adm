@@ -18,4 +18,4 @@ type_settings:
   entity_browser_settings:
     display_review: true
 icon_uuid: null
-icon_path: null
+icon_path: /profiles/adm/modules/adm_media/images/document.png
