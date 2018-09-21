@@ -1,7 +1,7 @@
-langcode: et
+langcode: en
 status: true
 dependencies: {  }
 id: main
-label: Põhinavigatsioon
+label: 'Main navigation'
 description: 'Site section links'
 locked: true
