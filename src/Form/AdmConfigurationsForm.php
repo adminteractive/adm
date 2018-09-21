@@ -30,21 +30,6 @@ class AdmConfigurationsForm extends FormBase {
    *   The form structure.
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
-    $form['#title'] = $this->t('Select components');
-    $form['components'] = [
-      '#type' => 'checkboxes',
-      '#title' => $this->t('Enable following components'),
-      '#description' => $this->t('We recommend to select at least Media component.'),
-      '#options' => [
-        'media' => $this->t('Media'),
-        'webform' => $this->t('Webform'),
-        'search' => $this->t('Search'),
-        'default_content' => $this->t('Default content'),
-      ],
-      '#default_value' => ['media'],
-      '#multiple' => TRUE,
-    ];
-
     $form['editor'] = [
       '#type' => 'fieldset',
       '#title' => $this->t('Editor account'),
@@ -105,43 +90,16 @@ class AdmConfigurationsForm extends FormBase {
    *   The current state of the form.
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
-    if (!$form_state->isValueEmpty('components')) {
-      $components = $form_state->getValue('components', []);
-      $modules_to_enable = [];
+    $editor = $form_state->getValue('editor');
 
-      foreach ($components as $component) {
-        switch ($component) {
-          case 'media':
-            $modules_to_enable[] = 'adm_media';
-            break;
-          case 'webform':
-            $modules_to_enable[] = 'adm_webform';
-            break;
-          case 'search':
-            $modules_to_enable[] = 'adm_search';
-            break;
-          case 'default_content':
-            $modules_to_enable[] = 'adm_default_content';
-            break;
-        }
-      }
-
-      if (!empty($modules_to_enable)) {
-        \Drupal::state()->set('adm.enabled_components', $modules_to_enable);
-        //\Drupal::service('module_installer')->install($modules_to_enable);
-      }
-
-      $editor = $form_state->getValue('editor');
-
-      if (!empty($editor)) {
-        $user = User::create([
-          'name' => $editor['username'],
-          'mail' => $editor['email'],
-          'roles' => ['editor'],
-          'password' => $editor['password'],
-        ]);
-        $user->save();
-      }
+    if (!empty($editor)) {
+      $user = User::create([
+        'name' => $editor['username'],
+        'mail' => $editor['email'],
+        'roles' => ['editor'],
+        'password' => $editor['password'],
+      ]);
+      $user->save();
     }
   }
 }
