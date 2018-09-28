@@ -1,9 +1,0 @@
-langcode: et
-status: true
-dependencies:
-  module:
-    - media
-id: media.file_link
-label: 'Faili link'
-targetEntityType: media
-cache: true

@@ -2,28 +2,28 @@ langcode: et
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.media.media_library
     - field.field.media.video_embedded.field_media_video_embed_field
+    - image.style.medium
     - media.type.video_embedded
   module:
-    - video_embed_field
-id: media.video_embedded.default
+    - image
+id: media.video_embedded.media_library
 targetEntityType: media
 bundle: video_embedded
-mode: default
+mode: media_library
 content:
-  field_media_video_embed_field:
-    type: video_embed_field_video
+  thumbnail:
+    type: image
     weight: 0
     region: content
     label: hidden
     settings:
-      responsive: true
-      width: 854
-      height: 480
-      autoplay: false
+      image_style: medium
+      image_link: ''
     third_party_settings: {  }
 hidden:
   created: true
+  field_media_video_embed_field: true
   name: true
-  thumbnail: true
   uid: true

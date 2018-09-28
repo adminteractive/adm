@@ -3,7 +3,6 @@ status: true
 dependencies:
   config:
     - field.storage.paragraph.field_media_item
-    - media.type.document
     - media.type.image
     - media.type.video_embedded
     - paragraphs.paragraphs_type.media_item
@@ -21,11 +20,10 @@ settings:
   handler: 'default:media'
   handler_settings:
     target_bundles:
-      document: document
       image: image
       video_embedded: video_embedded
     sort:
       field: _none
     auto_create: false
-    auto_create_bundle: document
+    auto_create_bundle: image
 field_type: entity_reference

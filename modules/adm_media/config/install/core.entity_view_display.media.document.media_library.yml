@@ -2,26 +2,28 @@ langcode: et
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.media.file_link
+    - core.entity_view_mode.media.media_library
     - field.field.media.document.field_media_file
+    - image.style.medium
     - media.type.document
   module:
-    - file
-id: media.document.file_link
+    - image
+id: media.document.media_library
 targetEntityType: media
 bundle: document
-mode: file_link
+mode: media_library
 content:
-  field_media_file:
+  thumbnail:
+    type: image
     weight: 0
     label: hidden
     settings:
-      use_description_as_link_text: true
-    third_party_settings: {  }
-    type: file_default
+      image_style: medium
+      image_link: ''
     region: content
+    third_party_settings: {  }
 hidden:
   created: true
+  field_media_file: true
   name: true
-  thumbnail: true
   uid: true
