@@ -13,9 +13,10 @@ type_settings:
   entity_type: media
   bundles:
     - document
-  display_plugins: {  }
+  display_plugins:
+    - 'view_mode:media.full'
   entity_browser: editor_document_browser
   entity_browser_settings:
-    display_review: true
+    display_review: false
 icon_uuid: null
 icon_path: /profiles/adm/modules/adm_media/images/document.png
