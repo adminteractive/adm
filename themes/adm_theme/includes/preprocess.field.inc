@@ -149,7 +149,9 @@ function adm_theme_preprocess_field__field_gallery_items(array &$variables) {
 function adm_theme_preprocess_field__field_media_image(array &$variables) {
   // Move photoswipe gallery class few levels up.
   // @see adm_theme_preprocess_field__field_gallery_items().
-  if (($key = array_search('photoswipe-gallery', $variables['attributes']['class'])) !== false) {
+  if (array_key_exists('class', $variables['attributes'])
+    && (($key = array_search('photoswipe-gallery', $variables['attributes']['class'])) !== FALSE)
+  ) {
     unset($variables['attributes']['class'][$key]);
   }
 }
