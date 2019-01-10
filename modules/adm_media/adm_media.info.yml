@@ -16,6 +16,7 @@ dependencies:
   - image
   - image_resize_filter
   - media
+  - media_library
   - paragraphs
   - path
   - photoswipe
