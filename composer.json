@@ -104,9 +104,6 @@
             },
             "drupal/embed": {
                 "Non-managed file as button icon": "https://www.drupal.org/files/issues/2018-07-03/embed-allow-non-managed-button-icon-files-2824110-9.patch"
-            },
-            "drupal/photoswipe": {
-                "Support Media entities": "https://www.drupal.org/files/issues/2018-09-19/2977943-24-media-support.patch"
             }
         }
     }
