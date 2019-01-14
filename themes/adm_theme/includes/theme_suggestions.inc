@@ -77,8 +77,15 @@ function adm_theme_theme_suggestions_image_formatter_alter(array &$suggestions, 
 function adm_theme_theme_suggestions_container_alter(array &$suggestions, array $variables) {
 
   if (isset($variables['element']['#attributes']['class'])) {
-    if (in_array('container-inline', $variables['element']['#attributes']['class'])) {
+
+    $class = $variables['element']['#attributes']['class'];
+
+    if ((is_array($class) && in_array('container-inline', $class))
+      || (is_string($class) && $class === 'container-inline')
+    ) {
       $suggestions[] = $variables['theme_hook_original'] . '__inline';
     }
+
   }
+
 }
