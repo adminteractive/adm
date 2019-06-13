@@ -35,7 +35,7 @@
         "drupal/admin_toolbar": "^1.20",
         "drupal/editor_advanced_link": "^1.4",
         "drupal/allowed_formats": "1.1",
-        "drupal/dropzonejs": "2.0.0-alpha3",
+        "drupal/dropzonejs": "2.0.0-alpha4",
         "drupal/image_resize_filter": "1.x-dev",
         "drupal/inline_entity_form": "^1.0",
         "drupal/linkit": "5.x-dev",
