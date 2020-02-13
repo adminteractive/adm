@@ -23,12 +23,12 @@
         }
     ],
     "require": {
-        "composer/installers": "^1.2",
+        "composer/installers": "^1.7",
         "cweagans/composer-patches": "^1.6",
         "drupal-composer/drupal-scaffold": "^2.2",
         "drupal/drupal-library-installer-plugin": "0.3",
         "drupal/console": "^1.0.2",
-        "drupal/core": "~8.7",
+        "drupal/core": "~8.8",
         "drush/drush": "~8.0|^9.0.0-beta8",
         "webflo/drupal-finder": "^1.0.0",
         "webmozart/path-util": "^2.3",
@@ -39,9 +39,9 @@
         "drupal/image_resize_filter": "1.x-dev",
         "drupal/inline_entity_form": "^1.0",
         "drupal/linkit": "5.x-dev",
-        "drupal/paragraphs": "^1.3",
-        "drupal/pathauto": "^1.0",
-        "drupal/photoswipe": "^2.2",
+        "drupal/paragraphs": "^1.10",
+        "drupal/pathauto": "^1.6",
+        "drupal/photoswipe": "^1.0",
         "drupal/recaptcha": "2.x-dev",
         "drupal/recreate_block_content": "^2.0",
         "drupal/scheduler": "^1.0",
@@ -50,7 +50,7 @@
         "drupal/webform": "^5.0@beta",
         "drupal/entity_browser": "dev-2.x",
         "drupal/entity_browser_enhanced": "dev-1.x",
-        "drupal/entity_embed": "dev-1.x",
+        "drupal/entity_embed": "^1.0",
         "drupal/entity_usage": "^2.0@alpha",
         "drupal/video_embed_field": "dev-2.x",
         "drupal/features": "^3.7",
@@ -100,10 +100,10 @@
         "enable-patching": true,
         "patches": {
             "drupal/paragraphs": {
-                "Paragraphs asymmetric support": "https://www.drupal.org/files/issues/2018-12-06/2461695-263.patch"
+                "Paragraphs asymmetric support": "https://www.drupal.org/files/issues/2019-11-16/2461695-273.patch"
             },
             "drupal/embed": {
-                "Non-managed file as button icon": "https://www.drupal.org/files/issues/2018-07-03/embed-allow-non-managed-button-icon-files-2824110-9.patch"
+                "Non-managed file as button icon": "https://www.drupal.org/files/issues/2019-12-30/embed-allow-non-managed-button-icon-files--2824110-39_0.patch"
             }
         }
     }
