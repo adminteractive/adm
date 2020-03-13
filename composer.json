@@ -100,7 +100,7 @@
         "enable-patching": true,
         "patches": {
             "drupal/paragraphs": {
-                "Paragraphs asymmetric support": "https://www.drupal.org/files/issues/2019-11-16/2461695-273.patch"
+                "Paragraphs asymmetric support": "https://www.drupal.org/files/issues/2020-03-06/2461695-276.patch"
             },
             "drupal/embed": {
                 "Non-managed file as button icon": "https://www.drupal.org/files/issues/2019-12-30/embed-allow-non-managed-button-icon-files--2824110-39_0.patch"
