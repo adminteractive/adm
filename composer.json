@@ -1,10 +1,4 @@
 {
-    "name": "adminteractive/adm",
-    "description": "ADM Interactive Drupal distribution",
-    "type": "drupal-profile",
-    "minimum-stability": "dev",
-    "prefer-stable": true,
-    "license": "GPL-2.0-or-later",
     "authors": [
         {
             "name": "ADM Interactive",
@@ -12,47 +6,69 @@
             "role": "Maintainer"
         }
     ],
-    "support": {
-        "issues": "http://drupal.org/project/issues/adm",
-        "source": "http://cgit.drupalcode.org/adm"
+    "config": {
+        "sort-packages": true
     },
+    "description": "ADM Interactive Drupal distribution",
+    "extra": {
+        "enable-patching": true,
+        "patches": {
+            "drupal/paragraphs": {
+                "Paragraphs asymmetric support": "https://www.drupal.org/files/issues/2020-03-06/2461695-276.patch"
+            },
+            "drupal/embed": {
+                "Non-managed file as button icon": "https://www.drupal.org/files/issues/2019-12-30/embed-allow-non-managed-button-icon-files--2824110-39_0.patch"
+            }
+        }
+    },
+    "license": "GPL-2.0-or-later",
+    "minimum-stability": "dev",
+    "name": "adminteractive/adm",
+    "prefer-stable": true,
     "repositories": [
         {
-            "type": "composer",
-            "url": "https://packages.drupal.org/8"
+            "type": "package",
+            "package": {
+                "name": "bower-asset/photoswipe",
+                "version": "4.1.1",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://github.com/dimsemenov/PhotoSwipe/archive/v4.1.1.zip",
+                    "type": "zip"
+                }
+            }
         }
     ],
     "require": {
+        "bower-asset/photoswipe": "^4.1",
         "composer/installers": "^1.7",
         "cweagans/composer-patches": "^1.6",
-        "drupal/core": "^9",
         "drupal/admin_toolbar": "^2.0",
-        "drupal/editor_advanced_link": "^1.4",
-        "drupal/media_directories": "^1.3",
         "drupal/allowed_formats": "^1.1",
+        "drupal/core": "^9",
         "drupal/dropzonejs": "^2.0",
+        "drupal/editor_advanced_link": "^1.4",
+        "drupal/entity_browser": "^2.4",
+        "drupal/entity_browser_enhanced": "^1.0",
+        "drupal/entity_embed": "^1.0",
+        "drupal/entity_usage": "^2.0",
+        "drupal/fakeobjects": "^1.0",
+        "drupal/features": "^3.7",
         "drupal/image_resize_filter": "^1.0",
         "drupal/inline_entity_form": "^1.0",
-        "drupal/linkit": "5.0-beta10 as 4.3",
-        "drupal/paragraphs": "^1.10",
-        "drupal/pathauto": "^1.6",
+        "drupal/linkit": "^5.0",
+        "drupal/media_directories": "^1.0",
+        "drupal/paragraphs": "^1.12",
+        "drupal/pathauto": "^1.8",
         "drupal/photoswipe": "^1.0",
         "drupal/recaptcha": "2.x-dev",
         "drupal/recreate_block_content": "^2.0",
         "drupal/scheduler": "^1.0",
-        "drupal/search_api": "^1.15",
+        "drupal/search_api": "^1.17",
         "drupal/smart_trim": "^1.2",
-        "drupal/webform": "^5.8",
-        "drupal/entity_browser": "^2.4",
-        "drupal/entity_browser_enhanced": "^1.0",
-        "drupal/entity_embed": "^1.0",
-        "drupal/entity_usage": "^2.0@alpha",
         "drupal/video_embed_field": "dev-2.x",
-        "drupal/features": "^3.7",
-        "drupal/fakeobjects": "^1.0"
-    },
-    "config": {
-        "sort-packages": true
+        "drupal/webform": "^5.19",
+        "vardot/dropzone": "dev-master"
     },
     "scripts": {
         "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
@@ -71,15 +87,9 @@
             "DrupalProject\\composer\\ScriptHandler::removeGitDirectories"
         ]
     },
-    "extra": {
-        "enable-patching": true,
-        "patches": {
-            "drupal/paragraphs": {
-                "Paragraphs asymmetric support": "https://www.drupal.org/files/issues/2020-03-06/2461695-276.patch"
-            },
-            "drupal/embed": {
-                "Non-managed file as button icon": "https://www.drupal.org/files/issues/2019-12-30/embed-allow-non-managed-button-icon-files--2824110-39_0.patch"
-            }
-        }
-    }
+    "support": {
+        "issues": "http://drupal.org/project/issues/adm",
+        "source": "http://cgit.drupalcode.org/adm"
+    },
+    "type": "drupal-profile"
 }
