@@ -1,4 +1,7 @@
 {
+    "name": "adminteractive/adm",
+    "description": "ADM Interactive Drupal distribution",
+    "license": "GPL-2.0-or-later",
     "authors": [
         {
             "name": "ADM Interactive",
@@ -6,52 +9,15 @@
             "role": "Maintainer"
         }
     ],
-    "config": {
-        "sort-packages": true
+    "support": {
+        "issues": "http://drupal.org/project/issues/adm",
+        "source": "http://cgit.drupalcode.org/adm"
     },
-    "description": "ADM Interactive Drupal distribution",
-    "extra": {
-        "enable-patching": true,
-        "patches": {
-            "drupal/paragraphs": {
-                "Paragraphs asymmetric support": "https://www.drupal.org/files/issues/2020-03-06/2461695-276.patch"
-            },
-            "drupal/embed": {
-                "Non-managed file as button icon": "https://www.drupal.org/files/issues/2019-12-30/embed-allow-non-managed-button-icon-files--2824110-39_0.patch"
-            }
-        }
-    },
-    "license": "GPL-2.0-or-later",
-    "minimum-stability": "dev",
-    "name": "adminteractive/adm",
-    "prefer-stable": true,
-    "repositories": [
-        {
-            "type": "package",
-            "package": {
-                "name": "bower-asset/photoswipe",
-                "version": "4.1.1",
-                "type": "drupal-library",
-                "dist": {
-                    "url": "https://github.com/dimsemenov/PhotoSwipe/archive/v4.1.1.zip",
-                    "type": "zip"
-                }
-            }
-        }
-    ],
+    "type": "drupal-profile",
     "require": {
-        "bower-asset/photoswipe": "^4.1",
-        "composer/installers": "^1.7",
-        "cweagans/composer-patches": "^1.6",
         "drupal/admin_toolbar": "^2.0",
         "drupal/allowed_formats": "^1.1",
-        "drupal/core": "^9",
-        "drupal/dropzonejs": "^2.0",
         "drupal/editor_advanced_link": "^1.4",
-        "drupal/entity_browser": "^2.4",
-        "drupal/entity_browser_enhanced": "^1.0",
-        "drupal/entity_embed": "^1.0",
-        "drupal/entity_usage": "^2.0",
         "drupal/fakeobjects": "^1.0",
         "drupal/features": "^3.7",
         "drupal/image_resize_filter": "^1.0",
@@ -66,30 +32,6 @@
         "drupal/scheduler": "^1.0",
         "drupal/search_api": "^1.17",
         "drupal/smart_trim": "^1.2",
-        "drupal/video_embed_field": "dev-2.x",
-        "drupal/webform": "^5.19",
-        "vardot/dropzone": "dev-master"
-    },
-    "scripts": {
-        "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
-        "pre-install-cmd": [
-            "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
-        ],
-        "pre-update-cmd": [
-            "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
-        ],
-        "post-install-cmd": [
-            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles",
-            "DrupalProject\\composer\\ScriptHandler::removeGitDirectories"
-        ],
-        "post-update-cmd": [
-            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles",
-            "DrupalProject\\composer\\ScriptHandler::removeGitDirectories"
-        ]
-    },
-    "support": {
-        "issues": "http://drupal.org/project/issues/adm",
-        "source": "http://cgit.drupalcode.org/adm"
-    },
-    "type": "drupal-profile"
+        "drupal/webform": "^5.19"
+    }
 }
