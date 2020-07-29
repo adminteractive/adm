@@ -1,28 +1,16 @@
 name: 'ADM Media'
 description: 'Media management'
 type: module
-core: 8.x
+core_version_requirement: ^8 || ^9
 dependencies:
-  - adm_media
-  - dropzonejs
-  - dropzonejs_eb_widget
-  - embed
-  - entity_browser
-  - entity_browser_enhanced
-  - entity_browser_entity_form
-  - entity_embed
   - field
   - file
   - image
-  - image_resize_filter
-  - media
-  - media_library
+  - media_directories
   - paragraphs
   - path
   - photoswipe
   - text
   - user
-  - video_embed_field
-  - video_embed_media
   - views
 package: ADM

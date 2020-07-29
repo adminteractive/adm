@@ -1,7 +1,7 @@
 name: ADM
-core: 8.x
 type: profile
 description: 'ADM Interactive Drupal distribution.'
+core_version_requirement: ^8 || ^9
 distribution:
   name: ADM
 package: ADM
@@ -14,7 +14,7 @@ dependencies:
   - admin_toolbar
   - admin_toolbar_links_access_filter
   - admin_toolbar_tools
-  - automated_cron
+  - adm_webform
   - big_pipe
   - block
   - block_content
@@ -28,7 +28,6 @@ dependencies:
   - dynamic_page_cache
   - editor
   - editor_advanced_link
-  - entity_reference
   - field
   - field_ui
   - file
@@ -44,7 +43,6 @@ dependencies:
   - paragraphs
   - path
   - pathauto
-  - recreate_block_content
   - search
   - settings_tray
   - shortcut
@@ -55,13 +53,10 @@ dependencies:
   - telephone
   - text
   - token
-  - toolbar
   - update
   - user
   - views
   - views_ui
-  - webform
-  - webform_ui
 themes:
   - adm_theme
   - seven
