@@ -3,6 +3,8 @@ status: true
 dependencies:
   config:
     - field.storage.paragraph.field_media_item
+    - media.type.image
+    - media.type.remote_video
     - paragraphs.paragraphs_type.media_item
 id: paragraph.media_item.field_media_item
 field_name: field_media_item
@@ -18,8 +20,8 @@ settings:
   handler: 'default:media'
   handler_settings:
     target_bundles:
+      remote_video: remote_video
       image: image
-      video_embedded: video_embedded
     sort:
       field: _none
     auto_create: false
