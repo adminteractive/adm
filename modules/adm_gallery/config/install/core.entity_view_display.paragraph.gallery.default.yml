@@ -1,0 +1,24 @@
+langcode: et
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.gallery
+id: paragraph.gallery.default
+targetEntityType: paragraph
+bundle: gallery
+mode: default
+content:
+  field_gallery_items:
+    type: photoswipe_field_formatter
+    weight: 0
+    label: hidden
+    settings:
+      photoswipe_node_style_first: ''
+      photoswipe_node_style: media_thumbnail
+      photoswipe_image_style: media_full
+      photoswipe_reference_image_field: field_media_image
+      photoswipe_caption: title
+      photoswipe_view_mode: default
+    third_party_settings: {  }
+    region: content
+hidden: {  }

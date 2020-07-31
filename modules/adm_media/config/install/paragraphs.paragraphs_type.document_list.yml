@@ -1,8 +1,0 @@
-langcode: et
-status: true
-dependencies: {  }
-id: document_list
-label: 'Document list'
-icon_uuid: null
-description: ''
-behavior_plugins: {  }

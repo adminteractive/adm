@@ -1,8 +1,13 @@
 langcode: et
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - crop
+third_party_settings:
+  crop:
+    image_field: _none
 id: image
-label: Image
+label: Pilt
 description: ''
 source: image
 queue_thumbnail_downloads: false

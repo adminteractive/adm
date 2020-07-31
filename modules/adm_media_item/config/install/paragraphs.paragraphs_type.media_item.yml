@@ -1,0 +1,9 @@
+langcode: et
+status: true
+dependencies: {  }
+id: media_item
+label: 'Media item'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

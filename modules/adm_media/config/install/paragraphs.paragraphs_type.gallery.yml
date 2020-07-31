@@ -1,8 +1,0 @@
-langcode: et
-status: true
-dependencies: {  }
-id: gallery
-label: Gallery
-icon_uuid: null
-description: ''
-behavior_plugins: {  }

@@ -1,9 +1,0 @@
-langcode: et
-status: true
-dependencies:
-  module:
-    - media
-id: media.preview
-label: Eelvaade
-targetEntityType: media
-cache: true

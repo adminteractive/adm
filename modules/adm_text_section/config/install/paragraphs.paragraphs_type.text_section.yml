@@ -1,0 +1,14 @@
+langcode: et
+status: true
+dependencies:
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+id: text_section
+label: 'Text section'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

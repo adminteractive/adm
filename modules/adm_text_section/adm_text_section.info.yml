@@ -1,0 +1,11 @@
+name: 'ADM Text Section'
+description: 'Text section component'
+type: module
+core_version_requirement: '^8 || ^9'
+package: ADM
+core: 8.x
+dependencies:
+  - field
+  - paragraphs
+  - paragraphs_library
+  - text

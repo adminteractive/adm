@@ -13,12 +13,12 @@ bundle: document
 label: Manus
 description: ''
 required: true
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
   file_directory: 'documents/[date:custom:Y]-[date:custom:m]'
-  file_extensions: 'txt doc xls pdf ppt pps odt ods odp docx xlsx pptx rtf'
+  file_extensions: 'txt doc xls pdf ppt pps odt ods odp docx xlsx pptx rtf xml xsd wsdl html zip'
   max_filesize: ''
   description_field: false
   handler: 'default:file'
