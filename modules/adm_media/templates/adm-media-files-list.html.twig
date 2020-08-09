@@ -1,0 +1,6 @@
+<div{{ attributes }}>
+  <h3{{ title_attributes }}>{{ title }}</h3>
+  {% for file in files %}
+    <div{{ file.attributes }}>{{ file.link }}</div>
+  {% endfor %}
+</div>
