@@ -7,8 +7,13 @@ distribution:
   langcode: et
 package: ADM
 install:
+  - adm_accordion
   - adm_default_content
+  - adm_document_list
+  - adm_gallery
+  - adm_grid
   - adm_media
+  - adm_media_item
   - adm_webform
   - color
   - field_ui

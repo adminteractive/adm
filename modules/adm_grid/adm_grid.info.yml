@@ -5,6 +5,6 @@ core_version_requirement: '^8 || ^9'
 package: ADM
 core: 8.x
 dependencies:
-  - entity_reference_revisions
+  - adm_text_section
   - field
   - paragraphs
