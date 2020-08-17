@@ -7,6 +7,7 @@
 use Drupal\user\Entity\User;
 use Drupal\user\RoleInterface;
 use Drupal\shortcut\Entity\Shortcut;
+use Drupal\user\UserInterface;
 
 /**
  * Implements hook_install().
@@ -17,7 +18,7 @@ function adm_install() {
 
   // Allow visitor account creation with administrative approval.
   $user_settings = \Drupal::configFactory()->getEditable('user.settings');
-  $user_settings->set('register', USER_REGISTER_ADMINISTRATORS_ONLY)->save(TRUE);
+  $user_settings->set('register', UserInterface::REGISTER_ADMINISTRATORS_ONLY)->save(TRUE);
 
   // Enable default permissions for system roles.
   user_role_grant_permissions(RoleInterface::ANONYMOUS_ID, ['access comments']);
