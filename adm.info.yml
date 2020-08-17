@@ -4,22 +4,28 @@ description: 'ADM Interactive Drupal distribution.'
 core_version_requirement: ^8 || ^9
 distribution:
   name: ADM
+  langcode: et
 package: ADM
+install:
+  - adm_default_content
+  - adm_media
+  - adm_webform
+  - color
+  - field_ui
+  - search
+  - shortcut
+  - views_ui
 dependencies:
   - adm_core
   - adm_page
   - adm_site
   - adm_user
-  - adm_media
   - admin_toolbar
   - admin_toolbar_links_access_filter
   - admin_toolbar_tools
-  - adm_webform
   - big_pipe
   - block
-  - block_content
   - ckeditor
-  - color
   - config
   - contextual
   - datetime
@@ -29,10 +35,8 @@ dependencies:
   - editor
   - editor_advanced_link
   - field
-  - field_ui
   - file
   - filter
-  - help
   - image
   - linkit
   - menu_link_content
@@ -43,9 +47,7 @@ dependencies:
   - paragraphs
   - path
   - pathauto
-  - search
   - settings_tray
-  - shortcut
   - smart_trim
   - syslog
   - system
@@ -56,7 +58,6 @@ dependencies:
   - update
   - user
   - views
-  - views_ui
 themes:
   - adm_theme
   - seven

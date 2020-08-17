@@ -62,4 +62,35 @@ function adm_install() {
   \Drupal::configFactory()->getEditable('system.theme')->set('admin', 'seven')->save(TRUE);
   // Enable the front-end theme.
   \Drupal::configFactory()->getEditable('system.theme')->set('default', 'adm_theme')->save(TRUE);
+
+  \Drupal::configFactory()->getEditable('locale.settings')
+    ->set('translate_english', 1)
+    ->save();
+
+  \Drupal::configFactory()->getEditable('system.date')
+    ->set('country.default', 'EE')
+    ->set('timezone.default', 'Europe/Tallinn')
+    ->set('timezone.user.configurable', FALSE)
+    ->set('first_day', 1)
+    ->save();
+
+  // Simple config file doesn't seem to work correctly,
+  // content language language seems to be still wrong,
+  // changing it here seems to fix it.
+  \Drupal::configFactory()->getEditable('language.types')
+    ->set('configurable', ['language_interface', 'language_content'])
+    ->set('negotiation.language_content.enabled', [
+      'language-url' => -20,
+      'language-selected' => -14,
+    ])
+    ->set('negotiation.language_content.method_weights', [
+      'language-url' => -20,
+      'language-content-entity' => -19,
+      'language-session' => -18,
+      'language-user' => -17,
+      'language-browser' => -16,
+      'language-interface' => -15,
+      'language-selected' => -14,
+    ])
+    ->save();
 }
