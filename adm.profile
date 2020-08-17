@@ -14,10 +14,10 @@
 function adm_install_tasks(&$install_state) {
   $tasks = [];
 
-  $tasks['\Drupal\adm\Form\AdmConfigurationsForm'] = [
+/*  $tasks['\Drupal\adm\Form\AdmConfigurationsForm'] = [
     'display_name' => t('Additional configurations'),
     'type' => 'form',
-  ];
+  ];*/
 
   return $tasks;
 }
