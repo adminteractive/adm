@@ -27,7 +27,7 @@
         "drupal/features": "^3.11",
         "drupal/image_resize_filter": "^1.1",
         "drupal/linkit": "^5.0",
-        "drupal/media_directories": "^1.0",
+        "drupal/media_directories": "^2.0",
         "drupal/paragraphs": "^1.12",
         "drupal/pathauto": "^1.8",
         "drupal/photoswipe": "^3.0",
