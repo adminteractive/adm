@@ -1,14 +1,15 @@
 bootstrap-cdn:
   remote: https://github.com/twbs/bootstrap
-  version: 4.0.0
+  version: 4.5.2
   license:
     name: MIT
     url: https://github.com/twbs/bootstrap/blob/v4-dev/LICENSE
     gpl-compatible: true
   css:
     theme:
-      //maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css: { type: external, minified: true }
+      https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css: { type: external, minified: true }
   js:
-    //maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js: { type: external, minified: true }
+    https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js: { type: external, minified: true }
   dependencies:
     - core/jquery
+    - core/popperjs

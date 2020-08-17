@@ -1,0 +1,17 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the adm_webform module.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function adm_webform_install() {
+
+  $config = \Drupal::configFactory()->getEditable('webform.settings');
+  $config->set('requirements.cdn', FALSE)
+    ->set('requirements.spam', FALSE)
+    ->save();
+}
