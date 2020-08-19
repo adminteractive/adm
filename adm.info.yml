@@ -4,7 +4,6 @@ description: 'ADM Interactive Drupal distribution.'
 core_version_requirement: ^8 || ^9
 distribution:
   name: ADM
-  langcode: et
 package: ADM
 install:
   - adm_accordion

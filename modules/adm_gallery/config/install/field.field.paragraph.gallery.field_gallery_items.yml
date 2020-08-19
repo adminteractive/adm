@@ -1,8 +1,9 @@
-langcode: et
+langcode: en
 status: true
 dependencies:
   config:
     - field.storage.paragraph.field_gallery_items
+    - media.type.image
     - paragraphs.paragraphs_type.gallery
 id: paragraph.gallery.field_gallery_items
 field_name: field_gallery_items

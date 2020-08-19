@@ -1,4 +1,4 @@
-langcode: et
+langcode: en
 status: false
 dependencies:
   config:
@@ -33,7 +33,6 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
-  langcode: true
   name: true
   search_api_excerpt: true
   uid: true

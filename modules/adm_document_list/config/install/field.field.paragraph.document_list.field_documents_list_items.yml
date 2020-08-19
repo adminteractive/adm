@@ -1,8 +1,9 @@
-langcode: et
+langcode: en
 status: true
 dependencies:
   config:
     - field.storage.paragraph.field_documents_list_items
+    - media.type.document
     - paragraphs.paragraphs_type.document_list
 id: paragraph.document_list.field_documents_list_items
 field_name: field_documents_list_items

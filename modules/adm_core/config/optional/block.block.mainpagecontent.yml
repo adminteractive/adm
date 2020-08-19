@@ -1,4 +1,4 @@
-langcode: et
+langcode: en
 status: true
 dependencies:
   module:
@@ -13,7 +13,7 @@ provider: null
 plugin: system_main_block
 settings:
   id: system_main_block
-  label: 'Lehekülje sisuosa'
+  label: 'Main content'
   provider: system
   label_display: '0'
 visibility: {  }

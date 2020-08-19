@@ -1,4 +1,4 @@
-langcode: et
+langcode: en
 status: true
 dependencies:
   config:
@@ -8,7 +8,7 @@ id: paragraph.tab_item.field_tab_item_title
 field_name: field_tab_item_title
 entity_type: paragraph
 bundle: tab_item
-label: Pealkiri
+label: Title
 description: ''
 required: true
 translatable: false

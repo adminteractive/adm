@@ -1,4 +1,4 @@
-langcode: et
+langcode: en
 status: true
 dependencies:
   module:
@@ -7,7 +7,7 @@ third_party_settings:
   crop:
     image_field: _none
 id: document
-label: Dokument
+label: Document
 description: ''
 source: file
 queue_thumbnail_downloads: false

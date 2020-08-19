@@ -1,4 +1,4 @@
-langcode: et
+langcode: en
 status: true
 dependencies:
   config:
@@ -10,7 +10,7 @@ id: paragraph.tab_item.field_tab_item_body
 field_name: field_tab_item_body
 entity_type: paragraph
 bundle: tab_item
-label: Sisu
+label: Content
 description: ''
 required: true
 translatable: false

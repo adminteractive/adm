@@ -1,8 +1,13 @@
-langcode: et
+langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.gallery.field_gallery_items
+    - image.style.media_full
+    - image.style.media_thumbnail
     - paragraphs.paragraphs_type.gallery
+  module:
+    - photoswipe
 id: paragraph.gallery.default
 targetEntityType: paragraph
 bundle: gallery

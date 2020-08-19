@@ -1,9 +1,9 @@
-langcode: et
+langcode: en
 status: true
 dependencies: {  }
 id: remote_video
-label: 'Manustatav video'
-description: 'Manustatav video Youtube või Vimeo keskkonnast.'
+label: 'Embedded video'
+description: 'Embedded video form Youtube or Vimeo.'
 source: 'oembed:video'
 queue_thumbnail_downloads: false
 new_revision: false
