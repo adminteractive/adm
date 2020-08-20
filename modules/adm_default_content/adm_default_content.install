@@ -1,13 +1,9 @@
 <?php
 
-
 /**
  * @file
  * Install default content for the VP Distro.
  */
-
-use Drupal\Core\File\FileSystemInterface;
-use Drupal\user\Entity\User;
 
 require_once 'includes/nodes.inc';
 require_once 'includes/paragraphs.inc';
@@ -15,7 +11,7 @@ require_once 'includes/paragraphs.inc';
 /**
  * Implements hook_install().
  */
-function vp_distro_default_content_install() {
+function adm_default_content_install() {
 
   adm_default_content_create_default_nodes();
 

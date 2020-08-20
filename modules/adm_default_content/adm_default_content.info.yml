@@ -1,5 +1,5 @@
 name: "ADM Default Content"
-description: "Default Content module."
+description: "Sets up the default content on site install and can be uninstalled later."
 core_version_requirement: ^8 || ^9
 type: module
 
