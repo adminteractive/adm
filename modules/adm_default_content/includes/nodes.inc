@@ -10,12 +10,17 @@ use Drupal\node\Entity\Node;
 /**
  * Create default nodes.
  */
-function adm_default_content_create_default_nodes() {
+function adm_default_content_create_default_nodes($paragraphs) {
   $front_page = Node::create([
     'type' => 'page',
     'langcode' => 'et',
     'uid' => 1,
     'title' => 'Avaleht',
+  ]);
+
+  $front_page->get('field_page_components')->appendItem([
+    'target_id' => $paragraphs['carousel']->id(),
+    'target_revision_id' => $paragraphs['carousel']->getRevisionId(),
   ]);
 
   $front_page->save();

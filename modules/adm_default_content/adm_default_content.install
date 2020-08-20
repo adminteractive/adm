@@ -14,7 +14,8 @@ require_once 'includes/paragraphs.inc';
  */
 function adm_default_content_install() {
   $media = adm_default_content_create_default_media();
-  adm_default_content_create_default_nodes();
+  $paragraphs = adm_default_content_create_default_front_paragraphs($media);
+  adm_default_content_create_default_nodes($paragraphs);
 
   \Drupal::configFactory()->getEditable('system.site')
     ->set('page.front', '/node/1')
