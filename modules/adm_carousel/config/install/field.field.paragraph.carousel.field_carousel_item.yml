@@ -3,25 +3,64 @@ status: true
 dependencies:
   config:
     - field.storage.paragraph.field_carousel_item
-    - media.type.carousel_item
     - paragraphs.paragraphs_type.carousel
+    - paragraphs.paragraphs_type.carousel_item
+  module:
+    - entity_reference_revisions
 id: paragraph.carousel.field_carousel_item
 field_name: field_carousel_item
 entity_type: paragraph
 bundle: carousel
-label: 'Carousel item'
+label: 'Carousel Item'
 description: ''
 required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  handler: 'default:media'
+  handler: 'default:paragraph'
   handler_settings:
+    negate: 0
     target_bundles:
       carousel_item: carousel_item
-    sort:
-      field: _none
-    auto_create: false
-    auto_create_bundle: ''
-field_type: entity_reference
+    target_bundles_drag_drop:
+      accordion:
+        weight: 14
+        enabled: false
+      accordion_item:
+        weight: 15
+        enabled: false
+      carousel:
+        weight: 16
+        enabled: false
+      carousel_item:
+        enabled: true
+        weight: 17
+      document_list:
+        weight: 18
+        enabled: false
+      from_library:
+        weight: 19
+        enabled: false
+      gallery:
+        weight: 20
+        enabled: false
+      grid:
+        weight: 21
+        enabled: false
+      media_item:
+        weight: 22
+        enabled: false
+      tab_item:
+        weight: 24
+        enabled: false
+      tabs:
+        weight: 23
+        enabled: false
+      text_section:
+        weight: 25
+        enabled: false
+      webform:
+        weight: 26
+        enabled: false
+field_type: entity_reference_revisions

@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+name: carousel
+label: 'Carousel (1920x768)'
+effects:
+  3ed2328c-5579-4727-b98c-fc186bca51e3:
+    uuid: 3ed2328c-5579-4727-b98c-fc186bca51e3
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1920
+      height: 768
+      anchor: center-center

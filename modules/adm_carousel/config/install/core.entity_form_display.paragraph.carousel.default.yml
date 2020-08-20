@@ -2,32 +2,34 @@ langcode: en
 status: true
 dependencies:
   config:
-    - entity_browser.browser.carousel_browser
     - field.field.paragraph.carousel.field_carousel_item
     - paragraphs.paragraphs_type.carousel
   module:
-    - entity_browser
+    - paragraphs
 id: paragraph.carousel.default
 targetEntityType: paragraph
 bundle: carousel
 mode: default
 content:
   field_carousel_item:
+    type: paragraphs
     weight: 0
     settings:
-      entity_browser: carousel_browser
-      field_widget_display: rendered_entity
-      field_widget_edit: true
-      field_widget_remove: true
-      selection_mode: selection_append
-      field_widget_display_settings:
-        view_mode: preview
-      field_widget_replace: false
-      open: false
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: carousel_item
+      features:
+        add_above: '0'
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
     third_party_settings: {  }
-    type: entity_browser_entity_reference
     region: content
 hidden:
   created: true
   status: true
-  uid: true

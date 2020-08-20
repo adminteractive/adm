@@ -1,8 +1,8 @@
 langcode: en
 status: true
 dependencies: {  }
-id: carousel
-label: Carousel
+id: carousel_item
+label: 'Carousel Item'
 icon_uuid: null
 icon_default: null
 description: ''
