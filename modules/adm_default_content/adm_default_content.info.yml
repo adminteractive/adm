@@ -6,3 +6,4 @@ type: module
 dependencies:
   - adm_carousel
   - adm_media
+  - adm_page
