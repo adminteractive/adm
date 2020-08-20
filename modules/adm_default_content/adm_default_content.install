@@ -5,6 +5,7 @@
  * Install default content for the VP Distro.
  */
 
+require_once  'includes/media.inc';
 require_once 'includes/nodes.inc';
 require_once 'includes/paragraphs.inc';
 
@@ -12,7 +13,7 @@ require_once 'includes/paragraphs.inc';
  * Implements hook_install().
  */
 function adm_default_content_install() {
-
+  $media = adm_default_content_create_default_media();
   adm_default_content_create_default_nodes();
 
   \Drupal::configFactory()->getEditable('system.site')
