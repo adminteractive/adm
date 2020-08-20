@@ -17,7 +17,7 @@ function adm_default_content_create_default_front_paragraphs($media) {
     'type' => 'carousel_item',
     'status' => 1,
     'field_carousel_item_image' => [
-      'target_id' => $media[1]->id(),
+      'target_id' => $media[0]->id(),
     ]
   ]);
   $slide_1->save();
@@ -26,7 +26,7 @@ function adm_default_content_create_default_front_paragraphs($media) {
     'type' => 'carousel_item',
     'status' => 1,
     'field_carousel_item_image' => [
-      'target_id' => $media[0]->id(),
+      'target_id' => $media[1]->id(),
     ]
   ]);
   $slide_2->save();

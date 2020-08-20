@@ -13,9 +13,9 @@ use Drupal\node\Entity\Node;
 function adm_default_content_create_default_nodes($paragraphs) {
   $front_page = Node::create([
     'type' => 'page',
-    'langcode' => 'et',
     'uid' => 1,
-    'title' => 'Avaleht',
+    'title' => 'Front Page',
+    'status' => 1,
   ]);
 
   $front_page->get('field_page_components')->appendItem([
@@ -27,17 +27,17 @@ function adm_default_content_create_default_nodes($paragraphs) {
 
   $page_403 = Node::create([
     'type' => 'page',
-    'langcode' => 'et',
     'uid' => 1,
-    'title' => 'Ligipääs keelatud',
+    'title' => 'Access denied',
+    'status' => 1,
   ]);
   $page_403->save();
 
   $page_404 = Node::create([
     'type' => 'page',
-    'langcode' => 'et',
     'uid' => 1,
-    'title' => 'Lehte ei leitud',
+    'title' => 'Page not found',
+    'status' => 1,
   ]);
   $page_404->save();
 
