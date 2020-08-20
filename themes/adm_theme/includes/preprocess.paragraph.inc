@@ -129,6 +129,14 @@ function adm_theme_preprocess_paragraph__carousel(array &$variables) {
 /**
  * Implements hook_preprocess_HOOK().
  */
+function adm_theme_preprocess_paragraph__carousel_item(array &$variables) {
+  // Disable container.
+  $variables['container_wrap'] = FALSE;
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
 function adm_theme_preprocess_paragraph__tab_item(array &$variables) {
   // Disable container.
   $variables['container_wrap'] = FALSE;

@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies: {  }
 name: carousel
-label: 'Carousel (1920x768)'
+label: 'Carousel (1920x620)'
 effects:
   3ed2328c-5579-4727-b98c-fc186bca51e3:
     uuid: 3ed2328c-5579-4727-b98c-fc186bca51e3
@@ -10,5 +10,5 @@ effects:
     weight: 1
     data:
       width: 1920
-      height: 768
+      height: 620
       anchor: center-center
