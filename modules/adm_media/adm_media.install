@@ -1,0 +1,22 @@
+<?php
+
+/**
+ * @file
+ */
+
+/**
+ * Implements hook_install().
+ */
+function adm_media_install($is_syncing) {
+  \Drupal::configFactory()->getEditable('media_directories.settings')
+    ->set('directory_taxonomy', 'media_folders')
+    ->save();
+
+  \Drupal::configFactory()->getEditable('media_directories_ui.settings')
+    ->set('enable_combined_upload', TRUE)
+    ->set('combined_upload_media_types', [
+      'document' => 'document',
+      'image' => 'image',
+    ])
+    ->save();
+}
