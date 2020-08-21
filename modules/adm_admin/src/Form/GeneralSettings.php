@@ -16,7 +16,7 @@ use Symfony\Component\HttpFoundation\Request;
 /**
  * Class GeneralSettings.
  *
- * @package Drupal\vp_distro_admin\Form
+ * @package Drupal\adm_admin\Form
  */
 class GeneralSettings extends ConfigFormBase {
 

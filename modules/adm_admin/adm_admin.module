@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Contains vp_distro_admin.module.
+ * Contains adm_admin.module.
  */
 
 use Drupal\Core\Form\FormStateInterface;
@@ -13,8 +13,8 @@ use Drupal\Core\Routing\RouteMatchInterface;
  */
 function adm_admin_help($route_name, RouteMatchInterface $route_match) {
   switch ($route_name) {
-    // Main module help for the vp_core module.
-    case 'help.page.vp_distro_admin':
+    // Main module help for the adm_core module.
+    case 'help.page.adm_admin':
       $output = '';
       $output .= '<h3>' . t('About') . '</h3>';
       $output .= '<p>' . t('ADM Administration') . '</p>';

@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Install default content for the VP Distro.
+ * Install default content for the ADM Distro.
  */
 
 require_once  'includes/media.inc';
