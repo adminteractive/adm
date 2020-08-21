@@ -3,6 +3,7 @@ description: 'Provides core components required by other features.'
 type: module
 core_version_requirement: ^8 || ^9
 dependencies:
+  - adm_admin
   - block
   - entity_reference_revisions
   - features
