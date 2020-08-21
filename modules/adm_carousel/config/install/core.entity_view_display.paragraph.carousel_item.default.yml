@@ -2,6 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.carousel_item.field_carousel_item_caption
     - field.field.paragraph.carousel_item.field_carousel_item_image
     - image.style.carousel
     - paragraphs.paragraphs_type.carousel_item
@@ -12,6 +13,14 @@ targetEntityType: paragraph
 bundle: carousel_item
 mode: default
 content:
+  field_carousel_item_caption:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
   field_carousel_item_image:
     type: media_thumbnail
     weight: 0

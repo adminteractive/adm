@@ -23,9 +23,12 @@ function adm_default_content_create_default_nodes($paragraphs) {
     'target_id' => $paragraphs['carousel']->id(),
     'target_revision_id' => $paragraphs['carousel']->getRevisionId(),
   ]);
+  $front_page->get('field_page_components')->appendItem([
+    'target_id' => $paragraphs['grid']->id(),
+    'target_revision_id' => $paragraphs['grid']->getRevisionId(),
+  ]);
 
   $front_page->set('moderation_state', 'published');
-
   $front_page->save();
 
   $page_403 = Node::create([

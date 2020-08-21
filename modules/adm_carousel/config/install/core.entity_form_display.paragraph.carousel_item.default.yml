@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - entity_browser.browser.media_directories_modal
+    - field.field.paragraph.carousel_item.field_carousel_item_caption
     - field.field.paragraph.carousel_item.field_carousel_item_image
     - paragraphs.paragraphs_type.carousel_item
   module:
@@ -12,6 +13,14 @@ targetEntityType: paragraph
 bundle: carousel_item
 mode: default
 content:
+  field_carousel_item_caption:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_carousel_item_image:
     type: entity_browser_entity_reference
     weight: 0

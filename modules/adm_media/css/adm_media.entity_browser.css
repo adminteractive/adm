@@ -1,0 +1,125 @@
+.entities-list.entity-type--media {
+  margin-left: -8px;
+  margin-right: -8px;
+}
+
+.entities-list.entity-type--media .rendered-entity {
+  width: 50%;
+  position: relative;
+  padding: 8px;
+  margin: 0;
+  background: white;
+}
+
+@media screen and (min-width: 45em) {
+  .entities-list.entity-type--media .rendered-entity {
+    width: 33.3%;
+  }
+}
+
+@media screen and (min-width: 60em) {
+  .entities-list.entity-type--media .rendered-entity {
+    width: 25%;
+  }
+}
+
+@media screen and (min-width: 77em) {
+  .entities-list.entity-type--media .rendered-entity {
+    width: 16.6%;
+  }
+}
+
+
+.entities-list.entity-type--media .rendered-entity:before {
+  position: absolute;
+  top: 7px;
+  left: 7px;
+  width: calc(100% - 16px);
+  height: calc(100% - 16px);
+  content: "";
+  transition: border-color 0.2s,color 0.2s,background 0.2s;
+  pointer-events: none;
+  border: 1px solid #dbdbdb;
+}
+
+.entities-list.entity-type--media .field--name-thumbnail {
+  overflow: hidden;
+  text-align: center;
+  background-color: #ebebeb;
+  padding-bottom: 26px;
+}
+
+.entities-list.entity-type--media .field--name-thumbnail,
+.entities-list.entity-type--media .field--name-field-media-image {
+  text-align: center;
+  background: #ebebeb;
+  min-height: 120px;
+}
+
+.entities-list.entity-type--media .field--name-thumbnail img,
+.entities-list.entity-type--media .field--name-field-media-image img {
+  height: 180px;
+  object-fit: contain;
+  object-position: center center;
+}
+
+.entities-list.entity-type--media .media-library-item__attributes .media-library-item__name {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  right: 8px;
+  display: block;
+  overflow: hidden;
+  max-width: calc(100% - 10px);
+  max-height: calc(100% - 50px);
+  padding: 5px;
+  background: white;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.entities-list.entity-type--media .media-library-item__attributes .media-library-item__name:hover {
+  white-space: normal;
+}
+
+.entities-list.entity-type--media .remove-button {
+  position: absolute;
+  z-index: 1;
+  top: 10px;
+  right: 10px;
+  overflow: hidden;
+  width: 21px;
+  height: 21px;
+  margin: 5px;
+  padding: 0;
+  transition: 0.2s border-color;
+  color: transparent;
+  border: 2px solid #ccc;
+  border-radius: 20px;
+  background-size: 13px;
+  text-shadow: none;
+  font-size: 0;
+  background: url(/core/misc/icons/787878/ex.svg) #fff center no-repeat;
+  background-size: 13px;
+}
+
+.entities-list.entity-type--media .edit-button {
+  position: absolute;
+  z-index: 1;
+  top: 10px;
+  right: 36px;
+  overflow: hidden;
+  width: 21px;
+  height: 21px;
+  margin: 5px;
+  padding: 0;
+  transition: 0.2s border-color;
+  color: transparent;
+  border: 2px solid #ccc;
+  border-radius: 20px;
+  background-size: 13px;
+  text-shadow: none;
+  font-size: 0;
+  background: url(/core/misc/icons/787878/wrench.svg) #fff center no-repeat;
+  background-size: 13px;
+}

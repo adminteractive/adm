@@ -1,10 +1,8 @@
-view:
+entity_browser:
   css:
     theme:
-      css/adm_media.view.css: {}
-  dependencies:
-    - core/jquery
-    - core/drupal
+      css/adm_media.entity_browser.css: {}
+
 image-resize:
   css:
     theme:
@@ -12,4 +10,4 @@ image-resize:
   js:
     js/adm_media.image-resize.js: {}
   dependencies:
-  - core/jquery
+    - core/jquery

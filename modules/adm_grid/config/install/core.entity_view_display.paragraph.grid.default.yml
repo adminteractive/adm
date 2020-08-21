@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.grid.field_grid_items
+    - field.field.paragraph.grid.field_grid_title
     - paragraphs.paragraphs_type.grid
   module:
     - entity_reference_revisions
@@ -13,11 +14,19 @@ mode: default
 content:
   field_grid_items:
     type: entity_reference_revisions_entity_view
-    weight: 0
+    weight: 1
     label: hidden
     settings:
       view_mode: default
       link: ''
     third_party_settings: {  }
+    region: content
+  field_grid_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
     region: content
 hidden: {  }

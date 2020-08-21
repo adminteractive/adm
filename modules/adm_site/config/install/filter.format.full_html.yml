@@ -6,6 +6,7 @@ dependencies:
     - entity_embed
     - image_resize_filter
     - linkit
+    - media
 name: 'Full HTML'
 format: full_html
 weight: 1
@@ -14,31 +15,31 @@ filters:
     id: filter_align
     provider: filter
     status: true
-    weight: 8
+    weight: -49
     settings: {  }
   filter_caption:
     id: filter_caption
     provider: filter
     status: true
-    weight: 9
+    weight: -48
     settings: {  }
   filter_htmlcorrector:
     id: filter_htmlcorrector
     provider: filter
     status: true
-    weight: 10
+    weight: -44
     settings: {  }
   editor_file_reference:
     id: editor_file_reference
     provider: editor
     status: true
-    weight: 11
+    weight: -43
     settings: {  }
   filter_html:
     id: filter_html
     provider: filter
     status: false
-    weight: -10
+    weight: -42
     settings:
       allowed_html: '<em> <strong> <cite> <blockquote cite> <code> <ul type> <ol start type> <li> <dl> <dt> <dd> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <s> <sup> <sub> <a href hreflang data-entity-substitution data-entity-type data-entity-uuid title> <img src alt data-entity-type data-entity-uuid data-align data-caption> <table> <caption> <tbody> <thead> <tfoot> <th> <td> <tr> <hr> <p> <h1> <pre>'
       filter_html_help: true
@@ -47,21 +48,64 @@ filters:
     id: linkit
     provider: linkit
     status: true
-    weight: 0
+    weight: -50
     settings:
       title: true
   entity_embed:
     id: entity_embed
     provider: entity_embed
     status: true
-    weight: 0
+    weight: -47
     settings: {  }
   filter_image_resize:
     id: filter_image_resize
     provider: image_resize_filter
     status: true
-    weight: 0
+    weight: -45
     settings:
       image_locations:
         local: true
         remote: false
+  filter_url:
+    id: filter_url
+    provider: filter
+    status: false
+    weight: -39
+    settings:
+      filter_url_length: 72
+  filter_html_image_secure:
+    id: filter_html_image_secure
+    provider: filter
+    status: false
+    weight: -37
+    settings: {  }
+  filter_html_escape:
+    id: filter_html_escape
+    provider: filter
+    status: false
+    weight: -41
+    settings: {  }
+  filter_autop:
+    id: filter_autop
+    provider: filter
+    status: false
+    weight: -40
+    settings: {  }
+  filter_image_link_to_source:
+    id: filter_image_link_to_source
+    provider: image_resize_filter
+    status: false
+    weight: -38
+    settings: {  }
+  media_embed:
+    id: media_embed
+    provider: media
+    status: true
+    weight: -46
+    settings:
+      default_view_mode: default
+      allowed_media_types:
+        image: image
+        remote_video: remote_video
+      allowed_view_modes:
+        default: default

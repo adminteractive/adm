@@ -63,5 +63,66 @@ function adm_default_content_create_default_front_paragraphs($media) {
   $paragraphs['carousel']->save();
 
 
+  $grid_1 = Paragraph::create([
+    'type' => 'text_section',
+    'status' => 1,
+    'field_text_section_content' => [
+      'value' => '<p class="lead">Praesent vestibulum dapibus nibh. Praesent venenatis metus at tortor pulvinar varius. Phasellus gravida semper nisi. Etiam feugiat lorem non metus. Suspendisse pulvinar, augue ac venenatis condimentum, sem libero volutpat nibh, nec pellentesque velit pede quis nunc.</p>
+<p>Mauris turpis nunc, blandit et, volutpat molestie, porta ut, ligula. Etiam ultricies nisi vel augue. Ut non enim eleifend felis pretium feugiat. Fusce egestas elit eget lorem. Nunc nulla.</p>
+<p>Praesent ut ligula non mi varius sagittis. Ut id nisl quis enim dignissim sagittis. Sed a libero. Nunc nonummy metus. Fusce a quam.</p>
+',
+    ]
+  ]);
+  $grid_1->save();
+
+  $grid_2 = Paragraph::create([
+    'type' => 'text_section',
+    'status' => 1,
+    'field_text_section_content' => [
+      'value' => '<p>Praesent vestibulum dapibus nibh. Praesent venenatis metus at tortor pulvinar varius. Phasellus gravida semper nisi. Etiam feugiat lorem non metus. Suspendisse pulvinar, augue ac venenatis condimentum, sem libero volutpat nibh, nec pellentesque velit pede quis nunc.</p>
+<p>Mauris turpis nunc, blandit et, volutpat molestie, porta ut, ligula. Etiam ultricies nisi vel augue. Ut non enim eleifend felis pretium feugiat. Fusce egestas elit eget lorem. Nunc nulla.</p>
+<p>Praesent ut ligula non mi varius sagittis. Ut id nisl quis enim dignissim sagittis. Sed a libero. Nunc nonummy metus. Fusce a quam.</p>
+',
+    ]
+  ]);
+  $grid_2->save();
+
+  $grid_3 = Paragraph::create([
+    'type' => 'text_section',
+    'status' => 1,
+    'field_text_section_content' => [
+      'value' => '<p>Praesent vestibulum dapibus nibh. Praesent venenatis metus at tortor pulvinar varius. Phasellus gravida semper nisi. Etiam feugiat lorem non metus. Suspendisse pulvinar, augue ac venenatis condimentum, sem libero volutpat nibh, nec pellentesque velit pede quis nunc.</p>
+<p>Mauris turpis nunc, blandit et, volutpat molestie, porta ut, ligula. Etiam ultricies nisi vel augue. Ut non enim eleifend felis pretium feugiat. Fusce egestas elit eget lorem. Nunc nulla.</p>
+<p>Praesent ut ligula non mi varius sagittis. Ut id nisl quis enim dignissim sagittis. Sed a libero. Nunc nonummy metus. Fusce a quam.</p>
+',
+    ]
+  ]);
+  $grid_3->save();
+
+  $paragraphs['grid'] = Paragraph::create([
+    'type' => 'grid',
+    'status' => 1,
+    'field_grid_title' => [
+      'value' => 'ADM Distribution successfully installed!'
+    ],
+  ]);
+
+  $paragraphs['grid']->get('field_grid_items')->appendItem([
+    'target_id' => $grid_1->id(),
+    'target_revision_id' => $grid_1->getRevisionId(),
+  ]);
+
+  $paragraphs['grid']->get('field_grid_items')->appendItem([
+    'target_id' => $grid_2->id(),
+    'target_revision_id' => $grid_2->getRevisionId(),
+  ]);
+
+  $paragraphs['grid']->get('field_grid_items')->appendItem([
+    'target_id' => $grid_3->id(),
+    'target_revision_id' => $grid_3->getRevisionId(),
+  ]);
+
+  $paragraphs['grid']->save();
+
   return $paragraphs;
 }

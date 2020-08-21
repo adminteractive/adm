@@ -162,3 +162,10 @@ function adm_theme_preprocess_field__field_media_image(array &$variables) {
 function adm_theme_preprocess_image(array &$variables) {
   $variables['attributes']['class'][] = 'img-fluid';
 }
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function adm_theme_preprocess_field__field_grid_title(array &$variables) {
+  $variables['attributes']['class'][] = 'mb-3';
+}

@@ -21,6 +21,16 @@ function adm_theme_preprocess_paragraph(array &$variables) {
   ];
 
   $variables['container_attributes'] = new Attribute($default_attributes);
+
+  /** @var \Drupal\paragraphs\Entity\Paragraph $paragraph */
+  $paragraph = $variables['paragraph'];
+  $parent = $paragraph->getParentEntity();
+
+  // If the parent entity type is paragraph
+  // then most likely the container is not needed.
+  if ($parent !== NULL && $parent->getEntityTypeId() === 'paragraph') {
+    $variables['container_wrap'] = FALSE;
+  }
 }
 
 /**

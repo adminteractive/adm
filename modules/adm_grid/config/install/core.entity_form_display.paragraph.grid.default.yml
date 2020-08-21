@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.grid.field_grid_items
+    - field.field.paragraph.grid.field_grid_title
     - paragraphs.paragraphs_type.grid
   module:
     - paragraphs
@@ -13,7 +14,7 @@ mode: default
 content:
   field_grid_items:
     type: paragraphs
-    weight: 0
+    weight: 1
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -24,10 +25,19 @@ content:
       form_display_mode: default
       default_paragraph_type: _none
       features:
-        duplicate: duplicate
-        collapse_edit_all: collapse_edit_all
         add_above: '0'
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
+      closed_mode_threshold: 0
     third_party_settings: {  }
+    region: content
+  field_grid_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
     region: content
 hidden:
   created: true

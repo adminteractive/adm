@@ -36,9 +36,7 @@ settings:
         -
           name: Media
           items:
-            - media_image
-            - media_document
-            - video
+            - media_directories
             - Blockquote
             - Table
             - HorizontalRule
