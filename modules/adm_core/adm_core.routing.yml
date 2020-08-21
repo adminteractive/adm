@@ -1,0 +1,7 @@
+adm_core.footer_settings:
+  path: '/admin/adm/footer'
+  defaults:
+    _form: '\Drupal\adm_core\Form\FooterSettings'
+    _title: 'Footer settings'
+  requirements:
+    _permission: 'administer adm settings'

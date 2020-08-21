@@ -1,0 +1,17 @@
+# Main
+adm_admin.main:
+  path: '/admin/adm'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'ADM Settings'
+  requirements:
+    _permission: 'administer adm settings'
+
+# General
+adm_admin.general:
+  path: '/admin/adm/general'
+  defaults:
+    _form: '\Drupal\adm_admin\Form\GeneralSettings'
+    _title: 'General settings'
+  requirements:
+    _permission: 'administer adm settings'

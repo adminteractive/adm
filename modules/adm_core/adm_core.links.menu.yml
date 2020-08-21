@@ -1,0 +1,5 @@
+adm_core.footer_settings:
+  title: 'Footer settings'
+  route_name: adm_core.footer_settings
+  parent: adm_admin.main
+  weight: -4

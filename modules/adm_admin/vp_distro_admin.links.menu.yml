@@ -1,0 +1,12 @@
+# Main
+adm_admin.main:
+  title: 'ADM Settings'
+  route_name: adm_admin.main
+  parent: system.admin
+
+# General
+adm_admin.general:
+  title: 'General settings'
+  route_name: adm_admin.general
+  parent: adm_admin.main
+  weight: -10

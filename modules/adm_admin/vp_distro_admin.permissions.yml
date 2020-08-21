@@ -1,0 +1,4 @@
+administer adm settings:
+  title: 'Administer ADM Settings'
+  description: 'Allow users to administer ADM settings'
+  restrict access: TRUE

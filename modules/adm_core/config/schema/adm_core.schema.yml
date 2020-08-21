@@ -1,0 +1,36 @@
+adm_core.footer_settings:
+  type: config_object
+  label: 'Footer settings'
+  mapping:
+    social_icons:
+      label: 'Social icons'
+      type: sequence
+      sequence:
+        type: adm_core.footer.social_icon.[%key]
+    footer_content:
+      type: sequence
+      label: 'Footer column content'
+      sequence:
+        type: adm_core.footer.item.[%key]
+
+adm_core.footer.social_icon.*:
+  type: mapping
+  label: 'Social icon'
+  mapping:
+    type:
+      type: string
+      label: 'Icon type'
+    url:
+      type: uri
+      label: 'Icon url'
+
+adm_core.footer.item.*:
+  type: mapping
+  label: 'Footer item'
+  mapping:
+    column_title:
+      type: label
+      label: 'Column title'
+    column_content:
+      type: text_format
+      label: 'Column content'

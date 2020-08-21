@@ -1,0 +1,6 @@
+toolbar:
+  version: VERSION
+  css:
+    theme:
+      css/adm-admin.toolbar.css: {}
+

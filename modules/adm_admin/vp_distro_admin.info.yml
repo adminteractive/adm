@@ -1,0 +1,9 @@
+name: 'ADM Admin'
+type: module
+description: 'ADM Administration enhancements'
+core: 8.x
+core_version_requirement: ^8 || ^9
+package: 'ADM'
+
+dependencies:
+  - locale

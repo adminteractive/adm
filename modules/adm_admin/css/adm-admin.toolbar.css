@@ -1,0 +1,9 @@
+.toolbar-icon-adm-admin-main:before {
+  background-image: url(../images/cog-solid.svg)!important;
+}
+
+.toolbar-icon-adm-admin-main:active:before,
+.toolbar-icon-adm-admin-main.is-active:before{
+  background-image: url(../images/cog-black.svg)!important;
+  background-repeat: no-repeat;
+}
