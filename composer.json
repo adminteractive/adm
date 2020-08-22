@@ -25,6 +25,7 @@
         "drupal/entity_usage": "^2.0",
         "drupal/fakeobjects": "^1.1",
         "drupal/features": "^3.11",
+        "drupal/fontawesome": "^2.17",
         "drupal/image_resize_filter": "^1.1",
         "drupal/linkit": "^5.0",
         "drupal/media_directories": "^2.0",

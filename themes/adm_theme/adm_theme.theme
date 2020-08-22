@@ -1,9 +1,11 @@
 <?php
+
 /**
  * @file
  */
 
 require_once 'includes/theme_suggestions.inc';
+require_once 'includes/preprocess.adm.inc';
 require_once 'includes/preprocess.field.inc';
 require_once 'includes/preprocess.menu.inc';
 require_once 'includes/preprocess.input.inc';

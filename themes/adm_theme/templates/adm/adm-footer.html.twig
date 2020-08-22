@@ -1,0 +1,24 @@
+<div{{ attributes }}>
+  <div class="row">
+    <div class="col-md-4">
+      {% if content.items[0].title|render|trim %}
+        <h4>{{ content.items[0].title }}</h4>
+      {% endif %}
+      {{ content.items[0].content }}
+      {{ content.icons }}
+    </div>
+    <div class="col-md-4">
+      {% if content.items[1].title|render|trim %}
+        <h4>{{ content.items[1].title }}</h4>
+      {% endif %}
+      {{ content.items[1].content }}
+    </div>
+    <div class="col-md-4">
+      {% if content.items[2].title|render|trim %}
+        <h4>{{ content.items[2].title }}</h4>
+      {% endif %}
+      {{ content.items[2].content }}
+    </div>
+  </div>
+  {{ content|without('items', 'icons') }}
+</div>

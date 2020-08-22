@@ -1,0 +1,34 @@
+<?php
+
+/**
+ * @file
+ */
+
+/**
+ * Multilingual menu mapping logic.
+ *
+ * Uses per-language menu logic, where language code is added to
+ * the menu machine name, e.g main-LANGCODE.
+ *
+ * This helper function doesn't check the existence of the menu,
+ * these should be created before.
+ *
+ * @param string|null $prefix
+ *   The menu prefix, defaults to 'main'.
+ *
+ * @return array
+ *   Returns list of menu names keyed by language.
+ */
+function _adm_menu_mapping($prefix = NULL) {
+  $menu_prefix = $prefix ?? 'main';
+  $default_language = Drupal::languageManager()->getDefaultLanguage();
+  $languages = Drupal::languageManager()->getLanguages();
+  $menus = [$default_language->getId() => $menu_prefix];
+
+  foreach ($languages as $language) {
+    $language_id = $language->getId();
+    $menus[$language_id] = $menu_prefix . '-' . $language_id;
+  }
+
+  return $menus;
+}

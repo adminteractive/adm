@@ -69,8 +69,8 @@ function adm_default_content_create_default_front_paragraphs($media) {
     'field_text_section_content' => [
       'value' => '<p class="lead">Praesent vestibulum dapibus nibh. Praesent venenatis metus at tortor pulvinar varius. Phasellus gravida semper nisi. Etiam feugiat lorem non metus. Suspendisse pulvinar, augue ac venenatis condimentum, sem libero volutpat nibh, nec pellentesque velit pede quis nunc.</p>
 <p>Mauris turpis nunc, blandit et, volutpat molestie, porta ut, ligula. Etiam ultricies nisi vel augue. Ut non enim eleifend felis pretium feugiat. Fusce egestas elit eget lorem. Nunc nulla.</p>
-<p>Praesent ut ligula non mi varius sagittis. Ut id nisl quis enim dignissim sagittis. Sed a libero. Nunc nonummy metus. Fusce a quam.</p>
-',
+<p>Praesent ut ligula non mi varius sagittis. Ut id nisl quis enim dignissim sagittis. Sed a libero. Nunc nonummy metus. Fusce a quam.</p>',
+      'format' => 'full_html'
     ]
   ]);
   $grid_1->save();
@@ -81,8 +81,8 @@ function adm_default_content_create_default_front_paragraphs($media) {
     'field_text_section_content' => [
       'value' => '<p>Praesent vestibulum dapibus nibh. Praesent venenatis metus at tortor pulvinar varius. Phasellus gravida semper nisi. Etiam feugiat lorem non metus. Suspendisse pulvinar, augue ac venenatis condimentum, sem libero volutpat nibh, nec pellentesque velit pede quis nunc.</p>
 <p>Mauris turpis nunc, blandit et, volutpat molestie, porta ut, ligula. Etiam ultricies nisi vel augue. Ut non enim eleifend felis pretium feugiat. Fusce egestas elit eget lorem. Nunc nulla.</p>
-<p>Praesent ut ligula non mi varius sagittis. Ut id nisl quis enim dignissim sagittis. Sed a libero. Nunc nonummy metus. Fusce a quam.</p>
-',
+<p>Praesent ut ligula non mi varius sagittis. Ut id nisl quis enim dignissim sagittis. Sed a libero. Nunc nonummy metus. Fusce a quam.</p>',
+      'format' => 'full_html',
     ]
   ]);
   $grid_2->save();
@@ -93,8 +93,8 @@ function adm_default_content_create_default_front_paragraphs($media) {
     'field_text_section_content' => [
       'value' => '<p>Praesent vestibulum dapibus nibh. Praesent venenatis metus at tortor pulvinar varius. Phasellus gravida semper nisi. Etiam feugiat lorem non metus. Suspendisse pulvinar, augue ac venenatis condimentum, sem libero volutpat nibh, nec pellentesque velit pede quis nunc.</p>
 <p>Mauris turpis nunc, blandit et, volutpat molestie, porta ut, ligula. Etiam ultricies nisi vel augue. Ut non enim eleifend felis pretium feugiat. Fusce egestas elit eget lorem. Nunc nulla.</p>
-<p>Praesent ut ligula non mi varius sagittis. Ut id nisl quis enim dignissim sagittis. Sed a libero. Nunc nonummy metus. Fusce a quam.</p>
-',
+<p>Praesent ut ligula non mi varius sagittis. Ut id nisl quis enim dignissim sagittis. Sed a libero. Nunc nonummy metus. Fusce a quam.</p>',
+      'format' => 'full_html'
     ]
   ]);
   $grid_3->save();

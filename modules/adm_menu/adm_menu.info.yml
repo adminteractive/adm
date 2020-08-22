@@ -1,0 +1,8 @@
+name: ADM Menu
+description: 'Menu functionality'
+type: module
+core_version_requirement: ^8 | ^9
+
+dependencies:
+  - menu_link_content
+  - menu_ui

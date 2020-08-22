@@ -21,6 +21,7 @@ install:
   - views_ui
 dependencies:
   - adm_core
+  - adm_menu
   - adm_page
   - adm_site
   - adm_user
@@ -41,6 +42,7 @@ dependencies:
   - field
   - file
   - filter
+  - fontawesome
   - image
   - linkit
   - menu_link_content

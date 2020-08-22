@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - adm_core
+  theme:
+    - adm_theme
+id: footerblock
+theme: adm_theme
+region: footer
+weight: 0
+provider: null
+plugin: footer_block
+settings:
+  id: footer_block
+  label: 'Footer block'
+  provider: adm_core
+  label_display: '0'
+visibility: {  }

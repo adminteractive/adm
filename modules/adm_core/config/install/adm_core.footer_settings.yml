@@ -1,0 +1,26 @@
+footer_content:
+  -
+    column_title: 'Lorem ipsum dolor sit'
+    column_content:
+      value: "<p>Curabitur ligula sapien, tincidunt non, euismod vitae, posuere imperdiet, leo. Fusce commodo aliquam arcu. Etiam ultricies nisi vel augue. Fusce vulputate eleifend sapien. Maecenas ullamcorper, dui et placerat feugiat, eros pede varius nisi, condimentum viverra felis nunc et lorem.</p>\r\n"
+      format: full_html
+  -
+    column_title: 'Duis lobortis massa imperdiet'
+    column_content:
+      value: "<p>Suspendisse non nisl sit amet velit hendrerit rutrum. Quisque malesuada placerat nisl. Ut non enim eleifend felis pretium feugiat. Nulla neque dolor, sagittis eget, iaculis quis, molestie non, velit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>\r\n"
+      format: full_html
+  -
+    column_title: 'Cras risus ipsum faucibus'
+    column_content:
+      value: "<p>Suspendisse non nisl sit amet velit hendrerit rutrum. Quisque malesuada placerat nisl. Ut non enim eleifend felis pretium feugiat. Nulla neque dolor, sagittis eget, iaculis quis, molestie non, velit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>\r\n"
+      format: full_html
+social_icons:
+  facebook:
+    type: facebook
+    url: 'https://facebook.com'
+  twitter:
+    type: twitter
+    url: 'https://twitter.com'
+  youtube:
+    type: youtube
+    url: 'https://youtube.com'
