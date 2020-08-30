@@ -29,3 +29,15 @@ function hook_adm_core_social_media_types_alter(array &$social_media) {
 function hook_adm_core_show_term_view_alter(array &$skip_vocabularies) {
   $skip_vocabularies[] = 'tags';
 }
+
+/**
+ * Map language code with shorter format.
+ *
+ * @param array $mapping
+ *   An associative array containing short names keyed by language code.
+ *
+ * @see _adm_core_language_short_name()
+ */
+function hook_adm_core_alter_language_short_names_alter(array &$mapping) {
+  $mapping['et'] = 'EST';
+}

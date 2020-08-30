@@ -9,6 +9,9 @@
  */
 function adm_core_theme($existing, $type, $theme, $path) {
   return [
+    'adm_header' => [
+      'render element' => 'content',
+    ],
     'adm_footer' => [
       'render element' => 'content',
     ],
@@ -28,4 +31,31 @@ function _adm_core_social_media_types() {
   \Drupal::moduleHandler()->alter('adm_core_social_media_types', $social);
 
   return $social;
+}
+
+/**
+ * Map language code with shorter format.
+ *
+ * By default, three letter format is being used. Custom
+ * modules can add or override this.
+ *
+ * @param string $language_code
+ *
+ * @return string
+ */
+function _adm_core_language_short_name($language_code) {
+  $mapping = [
+    'et' => 'EST',
+    'en' => 'ENG',
+    'ru' => 'RUS',
+  ];
+  // Allow altering language short names,
+  // to use it, implement hook_vp_core_alter_language_short_names().
+  \Drupal::moduleHandler()->alter('adm_core_alter_language_short_names', $mapping);
+
+  if (isset($mapping[$language_code])) {
+    return $mapping[$language_code];
+  }
+
+  return $language_code;
 }
