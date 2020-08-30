@@ -1,0 +1,6 @@
+services:
+  adm_core.adm_taxonomy_subscriber:
+    class: Drupal\adm_core\EventSubscriber\AdmTaxonomySubscriber
+    arguments: ['@current_user', '@module_handler']
+    tags:
+      - { name: event_subscriber }
