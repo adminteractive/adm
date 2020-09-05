@@ -7,8 +7,10 @@ dependencies:
   - entity_reference_revisions
   - field
   - menu_ui
+  - metatag
   - node
   - paragraphs
+  - paragraphs_browser
   - path
   - pathauto
   - scheduler
